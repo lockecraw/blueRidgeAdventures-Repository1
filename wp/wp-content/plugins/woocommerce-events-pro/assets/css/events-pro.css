@@ -1,0 +1,33 @@
+/** Copyright (c) IgniteWoo.com - All Rights Reserved */ 
+.ignitewoo_events_post_thumb { 
+	background: none repeat scroll 0 0 #EFEFEF;
+	border: 1px solid #CCCCCC;
+	float: left;
+	margin-right: 15px;
+	padding: 7px;
+}
+.ignitewoo_events_post_thumb img { 
+	max-width: 200px;
+}
+.ignitewoo_events_post_thumb p { 
+	margin-bottom: 10px !important;
+}
+.single_event_content .single_event_list {
+	clear: both;
+	padding-top: 12px;
+}
+.single_event_content .single_event_list .events_heading {
+	border-bottom: 1px solid #ccc;
+}
+.single_event_content .single_event_list img { 
+	float: left;
+	margin-right: 15px;
+	max-width: 200px;
+}
+.single-product .entry-content td, .entry-content th {
+	padding: 6px 10px;
+}
+.event_form_wrapper { 
+	clear:both;
+	margin: 1em 0;
+}

@@ -1,0 +1,244 @@
+.tubepress_embedded_title {
+	font-family: 'Kreon', serif;
+	font-weight: 300;
+	font-size: 24px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.BRA_tubepress_container {
+	float: left;
+	margin-bottom: 2em;
+	width: 100%;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 500;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+.BRA_tubepress_normal_embedded_wrapper {
+	text-align: left;
+	margin: auto;
+}
+
+.BRA_tubepress_embedded_title {
+	font-weight: 700;
+	font-size: larger;
+	margin-bottom: .3em;
+}
+
+.BRA_tubepress_thumbnail_area {
+	margin-top: 1em;	
+}
+
+.BRA_tubepress_thumbs {
+	float: left;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.BRA_tubepress_thumb {
+	float: left;
+	height: 250px;
+	line-height: 1.1em;
+	font-size: 12px;
+	margin: 0 10px;
+	overflow: hidden;
+}
+
+.BRA_tubepress_thumb .BRA_tubepress_embed,
+.BRA_tubepress_thumb img {
+	display: block;
+	margin: 0 auto ! important;
+	-ms-interpolation-mode: bicubic;
+}
+
+.BRA_tubepress_thumb a {
+	cursor: pointer;
+}
+
+.BRA_tubepress_single_video .BRA_tubepress_meta_group {
+	padding: 0;
+}
+
+.BRA_tubepress_meta {
+	float: left;
+}
+
+dl.BRA_tubepress_meta_group {
+    margin: 0 auto ! important;
+}
+
+dt.BRA_tubepress_meta_title,  
+dt.BRA_tubepress_meta_url,
+dt.BRA_tubepress_meta_description {
+	display: none;	
+}
+
+dd.BRA_tubepress_meta {
+	margin-bottom: auto ! important;
+	margin-left: 0 ! important;
+}
+
+dd.BRA_tubepress_meta_title, dd.BRA_tubepress_meta_title a, dd.BRA_tubepress_meta_title a:hover {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 700;
+	float: left;
+	width: auto;
+	margin: 3px 0px 8px 0px;
+}
+
+dt.BRA_tubepress_meta_author,
+dt.BRA_tubepress_meta_runtime, 
+dt.BRA_tubepress_meta_keywords, 
+dt.BRA_tubepress_meta_category, 
+dt.BRA_tubepress_meta_rating, 
+dt.BRA_tubepress_meta_ratings,
+dt.BRA_tubepress_meta_likes,
+dt.BRA_tubepress_meta_id,
+dt.BRA_tubepress_meta_views,
+dt.BRA_tubepress_meta_uploaddate {
+	font-style: italic;
+	color: #666;
+}
+
+dt.BRA_tubepress_meta_author:after, 
+dt.BRA_tubepress_meta_runtime:after,
+dt.BRA_tubepress_meta_keywords:after, 
+dt.BRA_tubepress_meta_category:after, 
+dt.BRA_tubepress_meta_rating:after, 
+dt.BRA_tubepress_meta_ratings:after,
+dt.BRA_tubepress_meta_likes:after,
+dt.BRA_tubepress_meta_id:after,
+dt.BRA_tubepress_meta_views:after,
+dt.BRA_tubepress_meta_uploaddate:after {
+	content: ":"
+}
+
+dd.BRA_tubepress_meta_author, 
+dd.BRA_tubepress_meta_keywords,
+dd.BRA_tubepress_meta_category, 
+dd.BRA_tubepress_meta_rating, 
+dd.BRA_tubepress_meta_ratings,
+dd.BRA_tubepress_meta_likes,
+dd.BRA_tubepress_meta_id,
+dd.BRA_tubepress_meta_views,
+dd.BRA_tubepress_meta_runtime,
+dd.BRA_tubepress_meta_uploaddate {
+	margin-left: .2em ! important;	
+	color: #c5c8cb;
+}
+
+dd.BRA_tubepress_meta_url {
+	clear: left;
+}
+dd.BRA_tubepress_meta_description {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+.BRA_tubepress_meta_group dt {
+	clear: both;
+	float: left;
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_thumb {
+	width: 100%;	
+	height: auto;
+	margin-top: 1em;
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_thumb img {
+    width: auto ! important;
+    padding: 5% 5% 1% 2%;
+    margin: 0 auto ! important;
+    -ms-interpolation-mode: bicubic;
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_thumbnail_area {
+    margin-top: auto;
+    float: left;
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_thumb  {
+    margin-top: auto;   
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_meta_group {
+    padding: 0 2%;  
+}
+
+.BRA_tubepress_sidebar .BRA_tubepress_thumb a {
+    float: left;
+}
+
+.BRA_tubepress_container .pagination .disabled {
+	display: inline-block;
+    padding: 0 10px;
+	font-size: 20px;
+	border: 1px solid #a7a9ac;
+	height: 30px;
+	margin: 0 10px;
+	color: #c5c8cb;
+	cursor: default;
+}
+
+.BRA_tubepress_container .pagination .BRA_tubepress_pagination_dots {
+    padding: 0 0 0 3px;
+}
+
+div.BRA_tubepress_single_video {
+	float: left;	
+	width: 100%;
+	text-align: left;
+}
+
+div.BRA_tubepress_single_video dd.BRA_tubepress_meta_description {
+	margin-top: .3em;
+	margin-bottom: .8em;
+}
+
+
+div.BRA_tubepress_container div.pagination {
+    font-size: 13px;
+	text-align: center;
+	clear: both;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+div.BRA_tubepress_container div.pagination a, div.BRA_tubepress_container div.pagination span {
+    display: inline-block;
+    margin: 2px 5px!important;
+    text-decoration: none;
+    padding: 3px 5px;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+div.BRA_tubepress_container div.pagination span.current {
+   	display: inline-block;
+    padding: 0 10px;
+	font-size: 20px;
+	border: 1px solid #a7a9ac;
+	height: 30px;
+	margin: 0 10px;
+    
+}
+div.BRA_tubepress_container div.pagination a {
+    display: inline-block;
+	padding: 0 10px;
+	font-size: 20px;
+	border: 1px solid #a7a9ac;
+	height: 30px;
+	margin: 0 10px;
+}
+
+
+div.BRA_tubepress_container div.pagination a:hover {
+	background: #cccc33;
+	color: #FFFFFF;
+}

@@ -1,0 +1,13 @@
+*.log
+wp/.htaccess
+wp/wp-config.php
+wp/wp-content/advanced-cache.php
+wp/wp-content/backup-db/
+wp/wp-content/backups/
+wp/wp-content/blogs.dir/
+wp/wp-content/cache/
+wp/wp-content/upgrade/
+wp/wp-content/gallery/
+wp/wp/wp-content/uploads/
+wp/wp-content/wp-cache-config.php
+blueridgeadventures.sql

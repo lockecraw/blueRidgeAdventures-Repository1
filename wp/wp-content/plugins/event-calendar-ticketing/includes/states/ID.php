@@ -1,0 +1,40 @@
+<?php
+
+global $states;
+
+$states['ID'] = array(
+	'AC'    => __( 'Daerah Istimewa Aceh', 'ignitewoo_events' ),
+    'SU' => __( 'Sumatera Utara', 'ignitewoo_events' ),
+    'SB' => __( 'Sumatera Barat', 'ignitewoo_events' ),
+    'RI' => __( 'Riau', 'ignitewoo_events' ),
+    'KR' => __( 'Kepulauan Riau', 'ignitewoo_events' ),
+    'JA' => __( 'Jambi', 'ignitewoo_events' ),
+    'SS' => __( 'Sumatera Selatan', 'ignitewoo_events' ),
+    'BB' => __( 'Bangka Belitung', 'ignitewoo_events' ),
+    'BE' => __( 'Bengkulu', 'ignitewoo_events' ),
+    'LA' => __( 'Lampung', 'ignitewoo_events' ),
+    'JK' => __( 'DKI Jakarta', 'ignitewoo_events' ),
+    'JB' => __( 'Jawa Barat', 'ignitewoo_events' ),
+    'BT' => __( 'Banten', 'ignitewoo_events' ),
+    'JT' => __( 'Jawa Tengah', 'ignitewoo_events' ),
+    'JI' => __( 'Jawa Timur', 'ignitewoo_events' ),
+    'YO' => __( 'Daerah Istimewa Yogyakarta', 'ignitewoo_events' ),
+    'BA' => __( 'Bali', 'ignitewoo_events' ),
+    'NB' => __( 'Nusa Tenggara Barat', 'ignitewoo_events' ),
+    'NT' => __( 'Nusa Tenggara Timur', 'ignitewoo_events' ),
+    'KB' => __( 'Kalimantan Barat', 'ignitewoo_events' ),
+    'KT' => __( 'Kalimantan Tengah', 'ignitewoo_events' ),
+    'KI' => __( 'Kalimantan Timur', 'ignitewoo_events' ),
+    'KS' => __( 'Kalimantan Selatan', 'ignitewoo_events' ),
+    'KU' => __( 'Kalimantan Utara', 'ignitewoo_events' ),
+    'SA' => __( 'Sulawesi Utara', 'ignitewoo_events' ),
+    'ST' => __( 'Sulawesi Tengah', 'ignitewoo_events' ),
+    'SG' => __( 'Sulawesi Tenggara', 'ignitewoo_events' ),
+    'SR' => __( 'Sulawesi Barat', 'ignitewoo_events' ),
+    'SN' => __( 'Sulawesi Selatan', 'ignitewoo_events' ),
+    'GO' => __( 'Gorontalo', 'ignitewoo_events' ),
+    'MA' => __( 'Maluku', 'ignitewoo_events' ),
+    'MU' => __( 'Maluku Utara', 'ignitewoo_events' ),
+    'PA' => __( 'Papua', 'ignitewoo_events' ),
+    'PB' => __( 'Papua Barat', 'ignitewoo_events' )
+);

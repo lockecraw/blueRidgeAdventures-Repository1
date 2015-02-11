@@ -1,0 +1,315 @@
+
+#ignitewoo_events_wrap input[type="checkbox"], #ignitewoo_events_wrap input[type="radio"] { 
+	width: 15px;
+}
+
+#form_fields textarea.import,#form_fields textarea.export
+{
+  width:100%;
+  display:none;
+}
+
+#form_fields a.export,#form_fields a.import
+{
+   color: #999999;
+    float: right;
+    padding: 6px 0 3px;
+    text-align: right;
+}
+
+#form_fields a.export
+{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARUlEQVQYlWOsqqr6z4AEWltbGRmwACZsgngVtra2MqKbVl1d/R9DIS4AU8yCywR0caLdiGIiLje2trYyEjQRppmR6uEIADwwHBF0Tz+MAAAAAElFTkSuQmCC) no-repeat top left;
+}
+
+#form_fields a.import
+{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATElEQVQYla2QMQ7AMAgD7aqvhtnvpksiJdSKOpQRzHGCVQVXmbkNLpsy9QpOkiRK4pHYzwIAI8JLDupc+ux4rx7dce1bYg8BAH//4wOHsCB7eMCC4gAAAABJRU5ErkJggg==) no-repeat top left;
+}
+
+.event_form_field
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #BBBBBB;
+    margin: 20px 0 9px;
+    opacity: 0.75;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.event_form_field p
+{
+  margin:0 0 9px;
+}
+
+.event_form_field p.addon_name,.event_form_field p.addon_type
+{
+  width:49%;
+  float:left;
+}
+
+.event_form_field p.addon_name.addon_type,.event_form_field p.addon_type.addon_type
+{
+  float:right;
+}
+
+.event_form_field p.addon_name input,.event_form_field p.addon_type input,.event_form_field p.addon_name select,.event_form_field p.addon_type select
+{
+  width:100%;
+  display:block;
+}
+
+.event_form_field p.addon_description
+{
+  clear:both;
+}
+
+.event_form_field p.addon_description input
+{
+  display:block;
+  width:100%;
+}
+
+.event_form_field a.delete_addon
+{
+  color:#999;
+  float:right;
+  text-align:right;
+  padding:6px 0 3px;
+}
+
+.event_form_field a.delete_addon:hover,.event_form_field a.delete_addon:focus
+{
+  color:red;
+}
+
+.event_form_field .handle
+{
+  color:#999;
+  cursor:move;
+  float:left;
+  padding:6px 0 3px;
+  width: 55px !important;
+}
+
+.event_form_field:hover,.event_form_field:focus
+{
+  opacity:1;
+}
+
+.event_form_field_options
+{
+  width:100%;
+  background:#ececec;
+  border:1px solid #ececec;
+}
+
+.event_form_field_options th
+{
+  background:#ececec;
+  text-align:left;
+  font-size:.9em;
+  vertical-align:middle;
+  padding:3px;
+}
+
+.event_form_field_options td
+{
+  background:#fff;
+  text-align:left;
+  cursor:move;
+  padding:3px;
+}
+
+.event_form_field_options td input
+{
+  width:100%;
+}
+
+.event_form_field_options .actions
+{
+  text-align:right;
+}
+
+.event_form_field_options .actions button
+{
+  font-family:sans-serif;
+  margin:0;
+}
+
+
+
+
+
+#session_fields textarea.import,#session_fields textarea.export
+{
+  width:100%;
+  display:none;
+}
+
+#session_fields a.export,#session_fields a.import
+{
+  width:10px;
+  height:0;
+  float:right;
+  overflow:hidden;
+  margin:0 0 0 5px;
+  padding:10px 0 0;
+}
+
+#session_fields a.export
+{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAARUlEQVQYlWOsqqr6z4AEWltbGRmwACZsgngVtra2MqKbVl1d/R9DIS4AU8yCywR0caLdiGIiLje2trYyEjQRppmR6uEIADwwHBF0Tz+MAAAAAElFTkSuQmCC) no-repeat top left;
+}
+
+#session_fields a.import
+{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATElEQVQYla2QMQ7AMAgD7aqvhtnvpksiJdSKOpQRzHGCVQVXmbkNLpsy9QpOkiRK4pHYzwIAI8JLDupc+ux4rx7dce1bYg8BAH//4wOHsCB7eMCC4gAAAABJRU5ErkJggg==) no-repeat top left;
+}
+
+.event_session_field
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #BBBBBB;
+    margin: 20px 15px 9px 0;
+    opacity: 0.75;
+    overflow: none;
+    padding: 10px;
+}
+
+.event_session_field p
+{
+  margin:0 0 9px;
+}
+
+.event_session_field p.addon_name,.event_session_field p.addon_type
+{
+  width:48% !important;
+  float:left;
+}
+
+.event_session_field p.addon_name.addon_type,.event_session_field p.addon_type.addon_type
+{
+  float:right;
+}
+
+.event_session_field p.addon_name input,.event_session_field p.addon_type input,.event_session_field p.addon_name select,.event_session_field p.addon_type select
+{
+  width:100%;
+  display:block;
+}
+
+.event_session_field p.addon_description
+{
+  clear:both;
+}
+
+.event_session_field p.addon_description input
+{
+  display:block;
+  width:100%;
+}
+
+.event_session_field a.delete_addon
+{
+   color: #999999;
+    float: right;
+    margin-top: 0px;
+    padding: 0;
+    text-align: right;
+}
+
+.event_session_field a.delete_addon:hover,.event_session_field a.delete_addon:focus {
+    color:red;
+}
+
+.event_session_field .handle, .event_session_field .speaker_handle {
+    color: #999999;
+    cursor: move;
+    float: right;
+    font-size: 0.9em;
+    margin-right: 14px;
+    margin-top: 0px;
+    padding: 0;
+    width: 55px !important;
+}
+
+.event_session_field .speaker_handle, .event_session_field .event_speaker_handle { 
+    margin-right: 0 !important;
+    margin-top: 3px !important;
+}
+
+.event_session_field .speaker { border: 1px solid #ccc; }
+
+.event_session_field .speaker .delete_speaker img { margin: 6px 9px 0 0 !important; }
+
+.event_session_field .speaker .form-field { margin: 0 !important; padding: 0 0 0px 10px !important; }
+
+.event_session_field .speaker .speaker_desc { margin-bottom: 10px !important; }
+
+.event_session_field .event_hide_handle, .event_session_field .event_speaker_handle {
+    color: #999999;
+    cursor: pointer;
+    float: right;
+    font-size: 0.9em;
+    margin-right: 14px;
+    margin-top: 0px;
+    padding: 0;
+    text-decoration: none;
+    width: 110px !important;
+}
+
+.event_session_field .event_session_inner { display: none; }
+
+.event_session_field:hover,.event_session_field:focus
+{
+  opacity:1;
+}
+
+.event_session_field_options
+{
+  width:100%;
+  background:#ececec;
+  border:1px solid #ececec;
+}
+
+.event_session_field_options th
+{
+  background:#ececec;
+  text-align:left;
+  font-size:.9em;
+  vertical-align:middle;
+  padding:3px;
+}
+
+.event_session_field_options td
+{
+  background:#fff;
+  text-align:left;
+  cursor:move;
+  padding:3px;
+}
+
+.event_session_field_options td input
+{
+  width:100%;
+}
+
+.event_session_field_options .actions
+{
+  text-align:right;
+}
+
+.event_session_field_options .actions button
+{
+  font-family:sans-serif;
+  margin:0;
+}
+
+.event_session_field h4 {
+    border-bottom: 1px solid #E5E5E5;
+    font-size: 1.1em;
+    margin: 5px 0 0;
+    padding-bottom: 12px;
+    
+}

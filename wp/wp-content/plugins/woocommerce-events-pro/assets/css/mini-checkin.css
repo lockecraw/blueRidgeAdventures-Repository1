@@ -1,0 +1,51 @@
+/** Copyright (c) IgniteWoo.com - All Rights Reserved */ 
+body { 
+	font-size: 16px;
+}
+#ticket_order_mini_wrap h2 { 
+	background-color:  #2A95C5;
+	color: #ffffff;
+	font-size: 1.5em;
+	padding: 10px;
+}
+
+#ignitewoo_mini_checkin td { 
+	min-width: 125px;
+	vertical-align: top;
+	padding: 0.7em 0;
+}
+
+#ignitewoo_mini_checkin td.ticket_label { 
+	font-weight: bold;
+}
+
+#ignitewoo_mini_checkin td .meta_label { 
+	font-weight: bold;
+}
+
+#ignitewoo_mini_checkin .event_checkin_button { 
+	background-color: #21759B;
+	background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+	border-color: #21759B #21759B #1E6A8D;
+	border-radius: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	padding: 7px 20px;
+	margin-top: 1em;
+}
+
+#ticket_order_mini_wrap .checked_in { 
+	border: 1px solid #198D11;
+	background-color: #FFFBCC;
+	color: #198D11;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+#ticket_order_mini_wrap .error { 
+	color: #cf0000;
+	font-weight: bold;
+}

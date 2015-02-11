@@ -1,0 +1,41 @@
+<?php
+
+global $states;
+
+$states['IN'] = array(
+	'AP' => __( 'Andra Pradesh', 'ignitewoo_events' ),
+	'AR' => __( 'Arunachal Pradesh', 'ignitewoo_events' ),
+	'AS' => __( 'Assam', 'ignitewoo_events' ),
+	'BR' => __( 'Bihar', 'ignitewoo_events' ),
+	'CT' => __( 'Chhattisgarh', 'ignitewoo_events' ),
+	'GA' => __( 'Goa', 'ignitewoo_events' ),
+	'GJ' => __( 'Gujarat', 'ignitewoo_events' ),
+	'HR' => __( 'Haryana', 'ignitewoo_events' ),
+	'HP' => __( 'Himachal Pradesh', 'ignitewoo_events' ),
+	'JK' => __( 'Jammu and Kashmir', 'ignitewoo_events' ),
+	'JH' => __( 'Jharkhand', 'ignitewoo_events' ),
+	'KA' => __( 'Karnataka', 'ignitewoo_events' ),
+	'KL' => __( 'Kerala', 'ignitewoo_events' ),
+	'MP' => __( 'Madhya Pradesh', 'ignitewoo_events' ),
+	'MH' => __( 'Maharashtra', 'ignitewoo_events' ),
+	'MN' => __( 'Manipur', 'ignitewoo_events' ),
+	'ML' => __( 'Meghalaya', 'ignitewoo_events' ),
+	'MZ' => __( 'Mizoram', 'ignitewoo_events' ),
+	'NL' => __( 'Nagaland', 'ignitewoo_events' ),
+	'OR' => __( 'Orissa', 'ignitewoo_events' ),
+	'PB' => __( 'Punjab', 'ignitewoo_events' ),
+	'RJ' => __( 'Rajasthan', 'ignitewoo_events' ),
+	'SK' => __( 'Sikkim', 'ignitewoo_events' ),
+	'TN' => __( 'Tamil Nadu', 'ignitewoo_events' ),
+	'TR' => __( 'Tripura', 'ignitewoo_events' ),
+	'UT' => __( 'Uttaranchal', 'ignitewoo_events' ),
+	'UP' => __( 'Uttar Pradesh', 'ignitewoo_events' ),
+	'WB' => __( 'West Bengal', 'ignitewoo_events' ),
+	'AN' => __( 'Andaman and Nicobar Islands', 'ignitewoo_events' ),
+	'CH' => __( 'Chandigarh', 'ignitewoo_events' ),
+	'DN' => __( 'Dadar and Nagar Haveli', 'ignitewoo_events' ),
+	'DD' => __( 'Daman and Diu', 'ignitewoo_events' ),
+	'DL' => __( 'Delhi', 'ignitewoo_events' ),
+	'LD' => __( 'Lakshadeep', 'ignitewoo_events' ),
+	'PY' => __( 'Pondicherry (Puducherry)', 'ignitewoo_events' )
+);

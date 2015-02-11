@@ -1,0 +1,991 @@
+<?php
+/*
+Plugin Name: WooCommerce PayPal Payments Advanced
+Plugin URI: http://ignitewoo.com
+Description: Extends WooCommerce with a payment gateway for PayPal Payments Advanced.
+Version: 1.4
+Author: IgniteWoo.com
+Author URI: http://ignitewoo.com
+*/
+
+
+add_action( 'plugins_loaded', 'woocommerce_payments_advanced_init', 0 );
+
+function woocommerce_payments_advanced_init() {
+
+	if ( ! class_exists( 'WC_Payment_Gateway' ) )
+		return;
+
+	/**
+	* Required functions
+	*/
+	if ( ! function_exists( 'ignitewoo_queue_update' ) )
+		require_once( dirname( __FILE__ ) . '/ignitewoo_updater/ignitewoo_update_api.php' );
+
+	$this_plugin_base = plugin_basename( __FILE__ );
+
+	add_action( "after_plugin_row_" . $this_plugin_base, 'ignite_plugin_update_row', 1, 2 );
+
+
+	/**
+	* Plugin updates
+	*/
+	ignitewoo_queue_update( plugin_basename( __FILE__ ), 'fb3e9b6d452c3a3ac2c87f22cd2d09c1', '283' );
+
+
+	// Add the gateway to the list of available payment gateway 
+	add_filter( 'woocommerce_payment_gateways', 'add_paypal_advanced_gateway' );
+
+
+	function add_paypal_advanced_gateway( $methods ) { 
+
+		$methods[] = 'woocommerce_paypal_payments_advanced'; 
+
+
+		return $methods;
+
+	}
+
+	// Payments Advanced payment class
+	class woocommerce_paypal_payments_advanced extends WC_Payment_Gateway {
+
+		var $plugin_url;
+
+		public function __construct() { 
+
+			$this->plugin_url = plugins_url( basename( plugin_dir_path( __FILE__ ) ), basename( __FILE__ ) );
+
+			$this->id = 'payments_advanced';
+
+			$this->method_title	= 'PayPal Payments Advanced';
+
+			$this->icon 		= WP_PLUGIN_URL . "/" . plugin_basename( dirname(__FILE__) ) . '/images/cards.png';
+
+			$this->has_fields 	= false;
+					
+			$this->init_form_fields();
+
+			$this->init_settings();
+
+			$this->enabled 		= $this->settings['enabled'];
+			$this->title 		= $this->settings['title'];
+			$this->description	= $this->settings['description'];
+			$this->partnername	= $this->settings['partnername'];
+			$this->username		= $this->settings['username'];
+			$this->password		= $this->settings['password'];
+			$this->vendorname	= $this->settings['vendorname'];
+			$this->processing_type	= $this->settings['processing_type'];
+			$this->processing_status = $this->settings['processing_status'];
+			$this->success_msg	 = $this->settings['success_msg'];
+			$this->testmode		= $this->settings['testmode'];
+			$this->debug		= $this->settings['debug'];
+			$this->debugrecipient 	= $this->settings['debugrecipient'];
+
+			$this->ppbuttoncolor 	= $this->settings['ppbuttoncolor'];
+			$this->ppbuttontext 	= $this->settings['ppbuttontext'];
+			$this->pptemplateborder	= $this->settings['pptemplateborder'];
+			$this->ppsubheadertxt 	= $this->settings['ppsubheadertxt'];
+			$this->ppfieldtext 	= $this->settings['ppfieldtext'];
+
+			add_action( 'init', array( &$this, 'software_tests' ), -1 );
+
+			add_action( 'init', array( &$this, 'check_for_ipn_response' ) );
+
+			add_action( 'admin_notices', array( &$this,'curl_check' ) );
+
+			add_action( 'woocommerce_update_options_payment_gateways', array( &$this, 'process_admin_options' ) );
+			add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );  // WC >= 2.0
+
+			add_action( 'woocommerce_receipt_payments_advanced', array( &$this, 'receipt_page' ) );
+
+		} 
+
+		// Make sure the site is running WooCommerce 1.5 or later
+		function software_tests() { 
+			global $woocommerce;
+
+			if ( !$woocommerce ) 
+				return;
+
+			if ( version_compare( $woocommerce->version, '1.5.0' ) <= 0 )
+				add_action( 'admin_notices', array( &$this, 'version_nag' ) );
+
+		}
+
+
+		// Display notification when version requirement is not met
+		function version_nag() { 
+			global $woocommerce;
+
+			echo '<div style="background-color:#cf0000;color:#fff;font-weight:bold;font-size:16px;margin: -1px 15px 0 5px;padding:5px 10px">';
+
+			_e( 'The WooCommerce Gift Certificates Pro plugin requires WooCommerce 1.5.0 or newer to work correctly. You\'re using version', 'woocommerce' );
+
+			echo ' ' . $woocommerce->version; 
+
+			echo '</div>';
+
+		}
+
+
+		// CURL check
+		function curl_check() {
+
+			if ( !function_exists( 'curl_init' ) ) 
+				echo '<div class="error"><p>' . __('PayPal Payments Advanced requires PHP CURL to be enabled on your hosting server. Contact your hosting company for assistance.', 'woocommerce') . '</p></div>';
+
+		}
+
+		    
+		// Form fields
+		function init_form_fields() {
+		
+		    $this->form_fields = array(
+
+			'enabled' => array(
+							'title' => __( 'Enable/Disable', 'woocommerce' ), 
+							'label' => __( 'Enable PayPal Payments Advanced', 'woocommerce' ), 
+							'type' => 'checkbox', 
+							'description' => '', 
+							'default' => 'no'
+						), 
+			'title' => array(
+							'title' => __( 'Title', 'woocommerce' ), 
+							'type' => 'text', 
+							'description' => __( 'This controls the payment type title shown to the user during checkout.', 'woocommerce' ), 
+							'default' => __( 'Credit card via PayPal', 'woocommerce' )
+						), 
+			'description' => array(
+							'title' => __( 'Description', 'woocommerce' ), 
+							'type' => 'textarea', 
+							'description' => __( 'This controls the payment method description shown to the user during checkout.', 'woocommerce' ), 
+							'default' => 'Pay with your credit card via PayPal Payments Advanced.'
+						),  
+			'partnername' => array(
+							'title' => __( 'Partner Name', 'woocommerce' ), 
+							'type' => 'text', 
+							'description' => __( 'The ID provided to you by the authorized PayPal Reseller who registered you for the Payflow SDK. If you purchased your account directly from PayPal, use "PayPal".', 'woocommerce' ), 
+							'default' => ''
+						), 
+			'username' => array(
+							'title' => __( 'User Name', 'woocommerce' ), 
+							'type' => 'text', 
+							'description' => __( 'If you set up one or more additional users on the Payments Advanced account, this value is the of the user authorized to process transactions. If, however, you have not set up additional users on the account, set username to the same value as Merchant Login.', 'woocommerce' ), 
+							'default' => ''
+						), 
+			'password' => array(
+							'title' => __( 'Password', 'woocommerce' ), 
+							'type' => 'password', 
+							'description' => __( 'The password that you defined while registering for the Payments Advanced account.', 'woocommerce' ), 
+							'default' => ''
+						), 
+
+			'vendorname' => array(
+							'title' => __( 'Merchant Login or User Name', 'woocommerce' ), 
+							'type' => 'text', 
+							'description' => __( 'Your merchant login ID that you created when you registered for the account.', 'woocommerce' ), 
+							'default' => ''
+						),
+			'processing_type' => array(
+							'title' => __( 'Processing Mode', 'woocommerce' ), 
+							'label' => __( 'Processing Mode', 'woocommerce' ), 
+							'type' => 'select', 
+							'description' => __( 'Choose whether to only authorize transactions and not capture funds (you must capture funds manually) OR authorize and capture funds in one transaction. ', 'woocommerce' ), 
+							'default' => 'auth_cap',
+							'options' => array( 'auth' => 'Authorize Only', 'auth_cap' => 'Authorize and Capture' ),
+						),
+			'processing_status' => array(
+							'title' => __( 'Payment Status', 'woocommerce' ),
+							'label' => __( 'Payment Status', 'woocommerce' ),
+							'type' => 'select',
+							'description' => __( 'Choose the status to apply to an order when the payment is successful.', 'woocommerce' ),
+							'default' => 'completed',
+							'options' => array( 'completed' => 'Completed', 'processing' => 'Processing' ),
+						),
+			'success_msg' => array(
+							'title' => __( 'Payment Success Message', 'woocommerce' ),
+							'label' => __( 'Payment Success Message', 'woocommerce' ),
+							'type' => 'textarea',
+							'description' => __( 'The message displayed to customers when payment is complete.
+							You may use HTML including Javascript.', 'woocommerce' ),
+							'default' => __( 'Your order payment has been accepted by PayPal and is being processed. Thank you!', 'woocommerce' ),
+						),
+			'testmode' => array(
+							'title' => __( 'PayPal Test Mode', 'woocommerce' ), 
+							'label' => __( 'Enable Test Mode', 'woocommerce' ), 
+							'type' => 'checkbox', 
+// 							'description' => __( 'Enable test mode. This causes the gateway to simulate payments through PayPal\'s development server.', 'woocommerce' ), 
+							'default' => 'no'
+						), 
+			'debug' => array(
+							'title' => __( 'Debugging', 'woocommerce' ), 
+							'label' => __( 'Enable debug emails', 'woocommerce' ), 
+							'type' => 'checkbox', 
+							'description' => __( 'Enabled debug messages via email. Only works in <strong>Test Mode</strong>.', 'woocommerce' ), 
+							'default' => 'no'
+						),
+			'debugrecipient' => array(
+							'title' => __( 'Debugging Email', 'woocommerce' ), 
+							'type' => 'text', 
+							'description' => __( 'The email address that will receive debugging messages when debug mode is on.', 'woocommerce' ), 
+							'default' =>  get_option('admin_email')
+						),
+			'pptemplateborder' => array(
+							'title' => __( 'Template Border', 'woocommerce' ), 
+							'type' => 'color', 
+							'description' => __( 'This sets the color of the border around the embedded PayPal payment template', 'woocommerce' ), 
+							'default' =>  '#EDF2F7'
+						),
+			'ppsubheadertxt' => array(
+							'title' => __( 'Subheader Text', 'woocommerce' ), 
+							'type' => 'color', 
+							'description' => __( 'This sets the color of the words "Pay with PayPal" and "Pay with credit or debit card"', 'woocommerce' ), 
+							'default' =>  '#336699'
+						),
+			'ppbuttoncolor' => array(
+							'title' => __( 'Button Color', 'woocommerce' ), 
+							'type' => 'color', 
+							'description' => __( 'This sets the color of the Pay Now/Submit button.', 'woocommerce' ), 
+							'default' =>  '#FFAA00'
+						),
+			'ppbuttontext' => array(
+							'title' => __( 'Button Text', 'woocommerce' ), 
+							'type' => 'color', 
+							'description' => __( 'This sets the color of the text on the Pay Now/Submit button.', 'woocommerce' ), 
+							'default' =>  '#333333'
+						),
+			'ppfieldtext' => array(
+							'title' => __( 'Text Labels', 'woocommerce' ), 
+							'type' => 'color', 
+							'description' => __( 'The color of the text labels for card number, expiration date etc.', 'woocommerce' ), 
+							'default' =>  '#333333'
+						),
+			);
+
+		}
+
+
+		// This function is based on WooCom core code for plain text fields:
+		function generate_color_html( $key, $data ) { 
+
+			if ( isset( $data['title'] ) && $data['title'] != '' ) 
+				$title = $data['title']; 
+			else 
+				$title = '';
+
+			if ( !isset( $this->settings[$key] ) ) 
+				$this->settings[$key] = '';
+
+			$data['class'] = (isset( $data['class'] )) ? $data['class'] : '';
+
+			$data['css'] = (isset( $data['css'] )) ? $data['css'] : '';
+		
+			$html = '<tr valign="top">' . "\n";
+
+			$html .= '<th scope="row" class="titledesc">';
+
+			$html .= '<label for="' . $this->plugin_id . $this->id . '_' . $key . '">' . $title . '</label>';
+
+			$html .= '</th>' . "\n";
+
+			$html .= '<td class="forminp">' . "\n";
+
+			$html .= '<fieldset><legend class="screen-reader-text"><span>' . $title . '</span></legend>' . "\n";
+
+			$value = ( isset( $this->settings[ $key ] ) ) ? esc_attr( $this->settings[ $key ] ) : '';
+
+			$html .= '<input class="colorpick '.$data['class'].'" type="text" name="' . $this->plugin_id . $this->id . '_' . $key . '" id="' . $this->plugin_id . $this->id . '_' . $key . '" style="'.$data['css'].'" value="' . $value . '"/>';
+
+			$html .= '<div id="colorPickerDiv_' . $this->plugin_id . $this->id . '_' . $key . '" class="colorpickdiv" style="z-index: 100;background:#eee;border:1px solid #ccc;position:absolute;display:none;"></div>';
+
+			if ( isset( $data['description'] ) && $data['description'] != '' ) { 
+				$html .= '<span class="description">' . $data['description'] . '</span>' . "\n"; 
+			}
+
+			$html .= '</fieldset>';
+
+			$html .= '</td>' . "\n";
+
+			$html .= '</tr>' . "\n";
+
+			return $html;
+		}
+
+
+		// This function is based on WooCom core code for plain text fields:
+		function validate_color_field ( $key ) {
+
+			$color = ( isset( $this->settings[$key] ) ) ? $this->settings[$key] : '';
+			
+			if ( isset( $_POST[ $this->plugin_id . $this->id . '_' . $key ] ) )
+				$color = esc_attr( trim( stripslashes( $_POST[ $this->plugin_id . $this->id . '_' . $key ] ) ) );
+
+			return $color;
+
+		}
+
+
+		// Admin area
+		public function admin_options() {
+		?>
+
+			<h3><?php _e('PayPal Payments Advanced','woocommerce'); ?></h3>
+
+			<p><?php _e( 'PayPal Payments Advanced works by adding an iframe with PayPal payment fields to order confirmation page where the user can make payment.', 'woocommerce' ); ?></p>
+
+			<p><strong><?php _e( 'NOTE: Be sure to review this payment plugin\'s entire README file for important PayPal account settings!', 'woocommerce' ); ?></strong></p>
+
+			<table class="form-table">
+
+				<?php $this->generate_settings_html(); ?>
+
+			</table>
+
+		<?php
+
+		}
+
+
+		function check_for_ipn_response() { 
+
+			if ( isset( $_GET['paypalpaymentsadvanced'] ) && 'paypal_payments_advanced' == $_GET['paypalpaymentsadvanced'] )
+				$this->process_ipn_response();
+
+			if ( isset( $_GET['paypalpaymentsadvanced'] ) && 'error' == $_GET['paypalpaymentsadvanced'] )
+				$this->process_ipn_error();
+
+			if ( isset( $_GET['paypalpaymentsadvanced'] ) && 'success' == $_GET['paypalpaymentsadvanced'] )
+				$this->process_ipn_success();
+
+			if ( isset( $_GET['paypalpaymentsadvanced'] ) && 'cancel' == $_GET['paypalpaymentsadvanced'] )
+				$this->process_order_cancellation();
+
+		}
+
+
+		function process_ipn_error() { 
+
+			echo '<p>' . __( 'There was an error at PayPal while processing your transaction:', 'woocommerce' ) . '</p>';
+
+			$msg = $this->error_codes( $_REQUEST['RESULT'] );
+
+			echo '<p>' . __( 'Error: ', 'woocommerce' ) . $msg . '</p>';
+
+			echo '<p>'. $_REQUEST['RESPMSG'] . '</p>';
+
+			echo '<p>' . __( "If you'd like to retry this transaction, refresh this page and try again", 'woocommerce' ) . '</p>';
+
+			die;
+
+		}
+
+
+		function process_ipn_success() { 
+
+			echo '<p>' . html_entity_decode( $this->success_msg ) . '</p>';
+
+			ob_flush();
+
+			flush();
+
+			die;
+			
+			if (
+				( isset( $_POST['INVNUM'] ) && absint( $_POST['INVNUM'] ) > 0 )
+				&&
+				( isset( $_POST['RESULT'] ) )
+				&&
+				( isset( $_POST['SECURETOKEN'] ) )
+				&&
+				( isset( $_POST['SECURETOKENID'] ) )
+			)
+				$this->process_ipn_response();
+
+			die;
+
+		}
+
+
+		function process_order_cancellation() { 
+
+			if ( !isset( $_GET['order'] ) && absint( $_GET['order'] ) <= 0 ) 
+				die;
+
+			if ( wp_verify_nonce( $_GET['_n'], 'cancel_order' ) ) 
+				die;
+
+			$order_id = absint( $_GET['order_id'] ); 
+
+			$key = get_post_meta( $order_id, '_order_key', true );
+
+			if ( !$key || !isset( $_GET['key'] ) || '' == $_GET['key'] || $key != $_GET['key'] )
+				die;
+
+			$order = new WC_Order( $order_id );
+
+			if ( !$order ) 
+				die;
+
+			$order->cancel_order();
+
+		}
+
+		// PayPal postback processor
+		function process_ipn_response() { 
+
+			@ob_clean();
+
+			$_POST = stripslashes_deep( $_POST );
+
+			if ( isset( $_POST['INVNUM'] ) && absint( $_POST['INVNUM'] ) > 0 ) 
+				$order_id = absint( $_POST['INVNUM'] );
+			else if ( isset( $_POST['INVOICE'] ) && absint( $_POST['INVOICE'] ) > 0 ) 
+				$order_id = absint( $_POST['INVNUM'] );
+			else
+				die;
+
+			$order = new WC_Order( $order_id );
+
+			if ( !$order ) 
+				die;
+
+			$secure_token = get_post_meta( $order_id, 'secure_token', true );
+			$secure_token_id = get_post_meta( $order_id, 'secure_token_id', true );
+
+			if ( !isset( $_POST['SECURETOKEN'] ) || '' == $_POST['SECURETOKEN'] || $secure_token != $_POST['SECURETOKEN'] )
+				die;
+
+			if ( !isset( $_POST['SECURETOKENID'] ) || '' == $_POST['SECURETOKENID'] || $secure_token_id != $_POST['SECURETOKENID'] )
+				die;
+
+			// Legacy parameter handling
+			if ( isset( $_POST['AVSDATA'] ) && '' != $_POST['AVSDATA'] ) {
+
+				$_POST['AVSADDR'] = substr( $_POST['AVSDATA'], 0, 1 );
+				$_POST['AVSZIP'] = substr( $_POST['AVSDATA'], 1, 1 );
+				$_POST['IAVS'] = substr( $_POST['AVSDATA'], 2, 1 );
+
+			}
+
+			header('HTTP/1.1 200 OK');
+
+			//  RESULT=0  &PNREF=V19A2E49D876  &RESPMSG=Approved  &AUTHCODE=041PNI &AVSADDR=Y  &AVSZIP=Y  &IAVS=N
+
+			switch ( intval( $_POST['RESULT'] ) ) {
+
+			    // Approved
+
+			    case 0:
+					if ( isset( $_POST['AVSADDR'] ) && 'Y' != $_POST['AVSADDR'] ) { 
+						$msg = __('The billing address information does not match your card information.  Please re-enter.', 'woocommerce' );
+						$oops = true;
+					}
+
+					// Verify zip
+					if ( isset( $_POST['AVSZIP'] ) && 'Y' != $_POST['AVSZIP'] ) {
+						$msg = __('The billing postal code information does not match your card information.  Please re-enter.', 'woocommerce' );
+						$oops = true;
+					}
+
+					// Verify zip
+					if ( isset( $_POST['IAVS'] ) && 'Y' != $_POST['IAVS'] ) {
+						$msg = __('The billing address information does not match your card information.  Please re-enter.', 'woocommerce' );
+						$oops = true;
+					}
+
+					if ( !$oops )  {
+
+						// Payment complete
+		
+						$order->add_order_note( __( 'PayPal payment completed:', 'woocommerce') . ' (PayPal Transaction ID: ' . $_POST['PNREF'] . ')' . ' (Unique Transaction ID: ' . $_POST['PNREF'] . ') Authorization Code: ' . $_POST['AUTHCODE'] );
+
+						if ( !isset( $this->processing_status ) || empty( $this->processing_status ) )
+							$this->processing_status = 'completed';
+							
+						$order->update_status( $this->processing_status );
+
+						//$order->payment_complete();
+
+					} else {
+						
+						$this->send_debugging_email( "PAYPAL PAYFLOW PAYMENTS ADVANCED ERROR:\nresponse_code:" . $_POST['RESULT'] . "\nresponse_reason_text:" .$msg );
+					
+						$cancel_note = __('PayPal payment gateway reported: ', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $msg. '" (Unique Transaction ID: ' . $_POST['PNREF'] . ') Authorization Code: ' . $_POST['AUTHCODE'];
+			
+						$order->add_order_note( $cancel_note );
+
+						if ( !isset( $this->processing_status ) || empty( $this->processing_status ) )
+							$this->processing_status = 'completed';
+
+						$order->update_status( $this->processing_status );
+
+						//$order->payment_complete();
+
+					}
+
+					update_post_meta( $order_id, 'PayPal Reference Number', $_POST['PNREF'] );
+
+					if ( isset( $_POST['AUTHCODE'] ) && '' != $_POST['AUTHCODE'] )
+						update_post_meta( $order_id, 'Authorization Code', $_POST['AUTHCODE'] );
+
+				    break;
+
+			    // Account configuration issue
+			    case 1:
+			    // Invalid vendor account
+			    case 26:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+
+			    // Declined from bank
+			    case 12:
+			    // Issue with credit card number
+			    case 23:
+			    // Issue with expiration date
+			    case 24:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Transaction declined:', 'woocommerce' );
+				    $msg .= $_POST['RESPMSG'];
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+
+			    // Voice authorization required
+			    case 13:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Transaction pending:', 'woocommerce' );
+				    $msg .= $_POST['RESPMSG'];
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+			    case 112:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Error: Address and Zipcode do not match.', 'woocommerce' );
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+			    case 114:
+				    $cancel_note = __('PayPal payment may have failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Error: Card security code is not correct.', 'woocommerce' );
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+			    // Declined by filters
+			    case 125:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Transaction declined:', 'woocommerce' );
+				    $msg .= $_POST['RESPMSG'];
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+			    // Flagged for review by filters
+			    case 126:
+				    $cancel_note = __('PayPal payment REVIEW REQUIRED - You MUST review the transaction in your Payments Advanced account and manually accept it', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". TRANSACTION ID:' .$_POST['PNREF']. ' AUTH CODE: ' . $_POST['AUTHCODE'];                      
+				    $order->add_order_note( $cancel_note );
+				    //$msg = __( 'Transaction under review:', 'woocommerce' );
+				    //$msg .= $_POST['RESPMSG'];
+				    //$this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    // Transaction accepted but not complete
+    
+				    $order->update_status( 'pending' );
+	    
+				    $woocommerce->cart->empty_cart();
+
+				    // Empty awaiting payment session
+				    unset($_SESSION['order_awaiting_payment']);
+					    
+				    // Return thank you redirect
+				    return array(
+					    'result' 	=> 'success',
+					    'redirect'	=> add_query_arg('key', $order->order_key, add_query_arg('order', $order_id, get_permalink(get_option('woocommerce_thanks_page_id'))))
+				    );
+				    break;
+
+			    // Not processed by filters
+			    case 127:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Transaction under review:', 'woocommerce' );
+				    $msg .= $_POST['RESPMSG'];
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+
+			    // Generic error for all results not captured above
+			    default:
+				    $cancel_note = __('PayPal payment failed', 'woocommerce') . ' (Response Code: ' . $_POST['RESULT'] . '). ' . __('Payment was rejected due to an error', 'woocommerce') . ': "' . $_POST['RESPMSG'] . '". ';
+				    $order->add_order_note( $cancel_note );
+				    $msg = __( 'Processing error:', 'woocommerce' );
+				    $msg .= $_POST['RESPMSG'];
+				    $this->send_error_report( __('Payment error', 'woocommerce') . ': ' . $msg . '');
+				    break;
+			}
+
+			$this->send_debugging_email( "\n\nRESPONSE:" . print_r($_POST,true));	
+
+			die;
+
+		}
+
+
+		function get_paypal_token( $data, $paypal_adr ) { 
+			$ch = curl_init();
+
+			curl_setopt( $ch, CURLOPT_URL, $paypal_adr );
+			curl_setopt( $ch, CURLOPT_HEADER, 0 );
+			curl_setopt( $ch, CURLOPT_POST, 1 );
+			curl_setopt( $ch, CURLOPT_POSTFIELDS, $data );
+			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+			curl_setopt( $ch, CURLOPT_TIMEOUT, 90 );
+			curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, 30 );
+			curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 0 );
+			curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
+			curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST,  0 ); 
+
+			$response = curl_exec ($ch);
+
+			if ( $response === false )
+				$cerr = curl_error(); 
+
+			curl_close ( $ch);
+
+			//if ( !isset( $response['RESULT'] ) || 0 != $response['RESULT'] )
+			//	return false; 
+
+			return $response;
+
+		}
+
+
+		function generate_paypal_form( $order_id ) {
+			global $woocommerce;
+
+			$siteurl = user_trailingslashit( get_option( 'home' ) );
+			
+			$order = new WC_Order( $order_id );
+
+			if ( 'yes' != $this->testmode  ) 
+				$paypal_adr = 'https://payflowpro.paypal.com';
+			else
+				$paypal_adr = 'https://pilot-payflowpro.paypal.com';
+
+			$paypal_live_adr = 'https://payflowlink.paypal.com';
+
+			$txn['PARTNER'] = $this->partnername;
+			$txn['USER'] = $this->username;
+			$txn['PWD'] = $this->password;
+			$txn['VENDOR'] = $this->vendorname; //or your vendor name
+
+			$txn['pageCollapseBgColor'] = $this->pptemplateborder;
+			$txn['pageCollapseTextColor'] = $this->ppsubheadertxt;
+			$txn['pageButtonBgColor'] = $this->ppbuttoncolor;
+			$txn['pageButtonTextColor'] = $this->ppbuttontext;
+			$txn['labelTextColor'] = $this->ppfieldtext;
+
+			// Create secure token
+			$txn['CREATESECURETOKEN'] = 'Y';
+			$txn['SECURETOKENID'] = md5( microtime() );
+
+			$txn['ERRORURL']  = $siteurl . '?paypalpaymentsadvanced=error&amp;order=' . $order_id . '&amp;key=' . $order->order_key; // $this->get_return_url( $order );
+			
+			$txn['RETURNURL'] = $siteurl . '?paypalpaymentsadvanced=success&amp;order=' . $order_id . '&amp;key=' . $order->order_key; // $this->get_return_url( $order );
+			
+			$txn['CANCELURL'] = $siteurl . '?paypalpaymentsadvanced=cancel&amp;order=' . $order_id . '&amp;key=' . $order->order_key . '&_n=' . wp_create_nonce( 'pp_cancel_order' ); // $order->get_cancel_order_url();
+			
+			$txn['SILENTPOSTURL'] = trailingslashit( home_url() ).'?paypalpaymentsadvanced=paypal_payments_advanced';
+
+			$txn['CSCREQUIRED'] = true;
+			$txn['CSCEDIT'] = true;
+			$txn['URLMETHOD'] = 'POST';
+
+			if ( 'auth_cap' == $this->processing_type )
+			    $txn['TRXTYPE'] = 'S'; // S = sale, authorize and capture funds
+			else 
+			    $txn['TRXTYPE'] = 'A'; // A = authorize only, don't capture funds
+
+			$txn['AMT'] = $order->order_total; //amount: 1 dollar
+
+			// Customer Contact
+			$txn['FIRSTNAME'] = $order->billing_first_name;
+			$txn['LASTNAME'] = $order->billing_last_name;
+			$txn['EMAIL'] = $order->billing_email;
+			$txn['PHONENUM'] = $order->billing_phone;
+
+			// Billing info
+			$txn['BILLTOCOUNTRY'] = $order->billing_country;
+			$txn['STATE'] = $order->billing_state;
+			$txn['ZIP'] = $order->billing_postcode;
+			$txn['STREET'] = $order->billing_address_1;
+			$txn['CITY'] = $order->billing_city;
+
+			if ( $woocommerce->cart->needs_shipping() ) {
+
+				$txn['SHIPTOFIRSTNAME'] = $order->shipping_first_name;
+				$txn['SHIPTOLASTNAME'] = $order->shipping_last_name;
+				$txn['SHIPTOSTREET'] = $order->shipping_address_1;
+				$txn['SHIPTOCITY'] = $order->shipping_city;
+				$txn['SHIPTOCOUNTRY'] = $order->shipping_country;
+				$txn['SHIPTOSTATE'] = $order->shipping_state;
+				$txn['SHIPTOZIP'] = $order->shipping_postcode;
+
+			} else {
+
+				$txn['SHIPTOFIRSTNAME'] = $order->billing_first_name;
+				$txn['SHIPTOLASTNAME'] = $order->billing_last_name;
+				$txn['SHIPTOSTREET'] = $order->billing_address_1;
+				$txn['SHIPTOCITY'] = $order->billing_city;
+				$txn['SHIPTOCOUNTRY'] = $order->billing_country;
+				$txn['SHIPTOSTATE'] = $order->billing_state;
+				$txn['SHIPTOZIP'] = $order->billing_postcode;
+
+			}
+
+			$txn['INVNUM'] = $order->id;
+
+			$post = '';
+
+			foreach( $txn as $key => $val ) {
+					//$post .= urlencode( $key ) . '=' . urlencode( $val ) . '&';
+					$post .= $key . '=' . $val . '&';
+			}
+
+			$post = substr( $post, 0, -1 );
+
+			$this->send_debugging_email( "URL: " . $paypal_adr  . "\n\nSENDING REQUEST: \n\n" . print_r( $txn, true ) . "\n\nPOST DATA ENCODED: \n\n" . $post );
+
+			$token = $this->get_paypal_token( $post, $paypal_adr );
+
+			if ( !$token ) { 
+
+			    return __( 'There was an error generating a secure token for your transaction. Please refresh.', 'woocommerce' );
+
+			}
+
+			$temp = explode( '&', $token );
+
+			foreach( $temp as $k => $y ) {
+
+				$z = explode( '=', $y, 2 );
+
+				if ( 'SECURETOKEN' == $z[0] )
+					$token = $z[1]; 
+			}
+
+			$err = '';
+
+			if ( false !== strpos( $token, '&RESPMSG' ) ) { 
+
+				$token_parts = explode( '&', $token );
+
+				foreach( $token_parts as $k => $v ) {
+
+					$tp = explode( '=', $v );
+
+					if ( 'RESPMSG' == $tp[0] )
+						$err = $tp[1];
+
+				}
+			}
+
+			if ( !$token || false !== strpos( $token, '<div' ) ) { 
+
+			    echo $token;
+			    return __( 'There was an error generating a secure token for your transaction. Please refresh this page or check the related configuration settings.', 'woocommerce' );
+
+			} else if ( '' != $err ) { 
+
+			    return __( 'PayPal return an error while generating your payment form:', 'woocommerce' ) . '<p>' . __( 'Error:', 'woocommerce' ) .' <strong>' . $err . '</strong></p>';
+
+			}
+
+			update_post_meta( $order_id, 'secure_token', $token );
+			update_post_meta( $order_id, 'secure_token_id', $txn['SECURETOKENID'] );
+
+			$woocommerce->cart->empty_cart();
+
+			//Empty awaiting payment session
+			unset( $_SESSION['order_awaiting_payment'] );
+
+			$contents = '<form action="' . esc_url( $paypal_live_adr ) . '" method="post" id="paypal_payment_form">' . 
+					'<input type="hidden" name="SECURETOKEN" value="' . $token  .'" />' . 
+					'<input type="hidden" name="SECURETOKENID" value="' . $txn['SECURETOKENID']  .'" />';
+
+			if ( 'yes' == $this->testmode )
+					$contents .= '<input type="hidden" name="MODE" value="test" />';
+
+			$contents .= '<div>' . __( 'Loading payment form, please wait. If the form does not load within 5 seconds click the button below.', 'woocommerce' ) . '</div>';
+
+			$contents .= '<div style="width:100%; text-align:center;"><img src="' . esc_url( $this->plugin_url ) . '/images/ajax-loader.gif" alt="' . __( 'Loading...', 'woocommerce' ) . '" style="text-align:center; width: 48px; margin: 0 auto;" /></div>';
+
+			$contents .= '<div style="clear:both; margin-top: 15px; text-align:center;"><input type="submit" class="button-alt" id="submit_to_paypal" value="' . __('Pay via PayPal', 'woocommerce').'" /></div>';
+
+			$contents .= '</form>';
+
+			$contents = addslashes( $contents );
+
+
+			$woocommerce->add_inline_js('
+				jQuery( document ).ready( function() { 
+					jQuery( "#payments_advanced_id").contents().find("body").append( "' . $contents . '" );
+					jQuery( "#payments_advanced_id").contents().find("#submit_to_paypal").click();
+
+				});
+			');
+
+			return '<iframe id="payments_advanced_id" width="490" height="500" border="0" frameborder="0" scrolling="no" src="" >
+					' . __( 'Your browser does not support iframes. Your payment cannot be processed. Enable iframes, or upgrade to a modern browser.', 'woocommerce' ) . '
+				</iframe>
+				';
+			
+		}
+
+
+		// Payment processor 
+		function process_payment( $order_id ) {
+
+			$order = new WC_Order( $order_id );
+			
+			if ( !$this->form_submission_method ) {
+
+				return array(
+					'result' 	=> 'success',
+					'redirect' => add_query_arg( 'order', $order->id, add_query_arg( 'key', $order->order_key, get_permalink( woocommerce_get_page_id( 'pay' ) ) ) )
+				);
+			
+			} else {
+				
+				return array(
+					'result' 	=> 'success',
+ 					'redirect'	=> add_query_arg( 'order', $order->id, add_query_arg( 'key', $order->order_key, get_permalink( woocommerce_get_page_id( 'pay' ) ) ) )
+				);
+				
+			}
+
+		}
+
+
+		// Message for receipt page
+		function receipt_page( $order ) {
+			
+			echo '<p>'.__( 'Thank you for your order, please make payment below. Your details will be securely transmitted to PayPal.', 'woocommerce' ).'</p>';
+			
+			echo $this->generate_paypal_form( $order );
+		}
+
+
+		function error_codes( $code ) { 
+
+			switch( $code ) { 
+
+				// Account configuration issue
+				case 1:
+				// Invalid vendor account
+				case 26:
+					$msg = __('PayPal plugin configuration error', 'woocommerce');
+					break;
+
+				// Declined from bank
+				case 12:
+				// Issue with credit card number
+				case 23:
+				// Issue with expiration date
+				case 24:
+					$msg = __( 'Transaction declined:', 'woocommerce' );
+					break;
+
+				// Voice authorization required
+				case 13:
+					$msg = __( 'Transaction pending:', 'woocommerce' );
+					break;
+
+				case 112:
+					$msg = __( 'Error: Address and Zipcode do not match.', 'woocommerce' );
+					break;
+
+				case 114:
+					$msg = __( 'Error: Card security code is not correct.', 'woocommerce' );
+					break;
+
+				// Declined by filters
+				case 125:
+					$msg = __( 'Transaction declined:', 'woocommerce' );
+					break;
+
+				// Flagged for review by filters
+				case 126:
+					$msg = __( 'Transaction is under review:', 'woocommerce' );
+					break;
+
+				// Not processed by filters
+				case 127:
+					$msg = __( 'Transaction under review:', 'woocommerce' );
+					break;
+
+				// Generic error for all results not captured above
+				default:
+					$msg = __( 'Payment processing error:' . $code, 'woocommerce' );
+					break;
+			}
+
+			return $msg;
+
+		}
+
+		// Debug message delivery 
+		function send_debugging_email( $debug ) {
+			
+			if ( $this->debug != 'yes' ) return; // Debug must be enabled
+
+			if ( $this->testmode != 'yes' ) return; // Test mode required
+
+			if ( !$this->debugrecipient ) return; // Recipient needed
+
+			wp_mail( $this->debugrecipient, __( 'PayPal Debug', 'woocommerce' ), $debug );
+			
+		} 
+
+
+	} // end class	
+
+}
+
+
+// Handle payment IPN stuff -- added for WooCom 2.x support
+
+add_action( 'plugins_loaded', 'ignitewoo_payments_advanced_init', 11 );
+
+function ignitewoo_payments_advanced_init() {
+	global $woocommerce;
+
+	if ( version_compare( WOOCOMMERCE_VERSION, '2.0.0', '<' ) )
+		return;
+		
+	if ( isset( $_GET['paypalpaymentsadvanced'] ) ) { // && isset( $_POST['SECURETOKEN'] ) && isset( $_POST['INVNUM' ] ) ) {
+
+		add_action( 'init', 'ignitewoo_payments_advanced_init2', 99999 );
+
+	}
+
+}
+
+function ignitewoo_payments_advanced_init2() {
+
+		if ( ! class_exists( 'WC_Payment_Gateway' ) ) {
+
+			require_once( $woocommerce->plugin_path() . '/classes/class-wc-payment-gateways.php' );
+
+		}
+	
+		$temp_payments_advanced = new woocommerce_paypal_payments_advanced();
+
+		$temp_payments_advanced->check_for_ipn_response();
+
+}

@@ -1,0 +1,82 @@
+.ignitewoo-message {
+	position: relative;
+	z-index: 100;
+	border: 1px solid #217a94 !important;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	-moz-box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	box-shadow: inset 0 0 15px rgba( 0,0,0,0.04 );
+	overflow: hidden;
+	padding: 10px 0 10px !important;
+	background: #bbdae3 !important; /* url(../images/message.png) no-repeat right bottom !important; */
+	width: 100%;
+}
+.ignitewoo-message .squeezer {
+    max-width: 960px;
+    margin: 0;
+    padding: 0 10px;
+    text-align: left;
+    overflow: hidden;
+}
+.ignitewoo-message .admin_event_notice_wrap {
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    line-height: 36px;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+    font-weight: normal;
+    color: #333;
+    text-shadow: 0px 1px 1px #efefef;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    float: left;
+    vertical-align: middle;
+}
+.ignitewoo-message p.submit{ margin-right: 20px; }
+.ignitewoo-message p {
+    margin: 0 !important;
+    padding: 2px 0 !important;
+    float: left !important;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.ignitewoo-message a.button {
+	    font-size: 14px !important;
+	    line-height: 16px !important;
+	    margin: 0 5px 0 0;
+	    padding: 3px 15px;
+	    vertical-align: middle;
+	    color: #fff;
+	    text-align: center;
+	    text-decoration: none;
+	    -moz-border-radius: 5px;
+	    -webkit-border-radius: 5px;
+	    border-radius: 5px;
+	    background: none repeat scroll 0 0 #217A94;
+	    border: 1px solid #FFFFFF;
+	    -moz-box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+	    -webkit-box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+	    box-shadow: inset 0 0 2px rgba( 255,255,255,1), 0 1px 1px rgba( 0,0,0,0.1 );
+	    text-shadow: 0px -1px 0px rgba( 0,0,0,0.3);
+	    -webkit-transition-duration: .3s;
+	    -moz-transition-duration: .3s;
+	    cursor: pointer;
+	    font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",Verdana,"Bitstream Vera Sans",sans-serif;
+}
+.ignitewoo-message a.button:hover, a.button:active {
+    background-color: #449d21 !important;
+    border-color: #00cf00 !important;
+    -webkit-transition-duration: .3s;
+    outline: none;
+    opacity: 1;
+}
+.ignitewoo-message a.skip, a.docs {
+
+}
+
+.ignitewoo-message .twitter-share-button {
+    vertical-align: middle;
+}

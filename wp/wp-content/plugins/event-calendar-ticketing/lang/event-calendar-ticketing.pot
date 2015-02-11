@@ -1,0 +1,3334 @@
+# Copyright (C) 2013 IgniteWoo.com
+# This file is distributed under the same license as the Event Calendar & Ticketing package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Event Calendar & Ticketing 2.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/event-calendar-ticketing\n"
+"POT-Creation-Date: 2013-09-16 21:16:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: event-calendar-ticketing.php:687
+msgid "Loading..."
+msgstr ""
+
+#: event-calendar-ticketing.php:771
+msgid "There was an error while fetching events."
+msgstr ""
+
+#: event-calendar-ticketing.php:817
+msgid "Support"
+msgstr ""
+
+#: event-calendar-ticketing.php:818
+msgid "View Add-ons / Upgrades"
+msgstr ""
+
+#: includes/countries.php:14
+msgid "Afghanistan"
+msgstr ""
+
+#: includes/countries.php:15
+msgid "&#197;land Islands"
+msgstr ""
+
+#: includes/countries.php:16
+msgid "Albania"
+msgstr ""
+
+#: includes/countries.php:17
+msgid "Algeria"
+msgstr ""
+
+#: includes/countries.php:18
+msgid "Andorra"
+msgstr ""
+
+#: includes/countries.php:19
+msgid "Angola"
+msgstr ""
+
+#: includes/countries.php:20
+msgid "Anguilla"
+msgstr ""
+
+#: includes/countries.php:21
+msgid "Antarctica"
+msgstr ""
+
+#: includes/countries.php:22
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: includes/countries.php:23
+msgid "Argentina"
+msgstr ""
+
+#: includes/countries.php:24
+msgid "Armenia"
+msgstr ""
+
+#: includes/countries.php:25
+msgid "Aruba"
+msgstr ""
+
+#: includes/countries.php:26
+msgid "Australia"
+msgstr ""
+
+#: includes/countries.php:27
+msgid "Austria"
+msgstr ""
+
+#: includes/countries.php:28
+msgid "Azerbaijan"
+msgstr ""
+
+#: includes/countries.php:29
+msgid "Bahamas"
+msgstr ""
+
+#: includes/countries.php:30
+msgid "Bahrain"
+msgstr ""
+
+#: includes/countries.php:31
+msgid "Bangladesh"
+msgstr ""
+
+#: includes/countries.php:32
+msgid "Barbados"
+msgstr ""
+
+#: includes/countries.php:33
+msgid "Belarus"
+msgstr ""
+
+#: includes/countries.php:34
+msgid "Belgium"
+msgstr ""
+
+#: includes/countries.php:35
+msgid "Belau"
+msgstr ""
+
+#: includes/countries.php:36
+msgid "Belize"
+msgstr ""
+
+#: includes/countries.php:37
+msgid "Benin"
+msgstr ""
+
+#: includes/countries.php:38
+msgid "Bermuda"
+msgstr ""
+
+#: includes/countries.php:39
+msgid "Bhutan"
+msgstr ""
+
+#: includes/countries.php:40
+msgid "Bolivia"
+msgstr ""
+
+#: includes/countries.php:41
+msgid "Bonaire, Saint Eustatius and Saba"
+msgstr ""
+
+#: includes/countries.php:42
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: includes/countries.php:43
+msgid "Botswana"
+msgstr ""
+
+#: includes/countries.php:44
+msgid "Bouvet Island"
+msgstr ""
+
+#: includes/countries.php:45
+msgid "Brazil"
+msgstr ""
+
+#: includes/countries.php:46
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: includes/countries.php:47
+msgid "British Virgin Islands"
+msgstr ""
+
+#: includes/countries.php:48
+msgid "Brunei"
+msgstr ""
+
+#: includes/countries.php:49
+msgid "Bulgaria"
+msgstr ""
+
+#: includes/countries.php:50
+msgid "Burkina Faso"
+msgstr ""
+
+#: includes/countries.php:51
+msgid "Burundi"
+msgstr ""
+
+#: includes/countries.php:52
+msgid "Cambodia"
+msgstr ""
+
+#: includes/countries.php:53
+msgid "Cameroon"
+msgstr ""
+
+#: includes/countries.php:54
+msgid "Canada"
+msgstr ""
+
+#: includes/countries.php:55
+msgid "Cape Verde"
+msgstr ""
+
+#: includes/countries.php:56
+msgid "Cayman Islands"
+msgstr ""
+
+#: includes/countries.php:57
+msgid "Central African Republic"
+msgstr ""
+
+#: includes/countries.php:58
+msgid "Chad"
+msgstr ""
+
+#: includes/countries.php:59
+msgid "Chile"
+msgstr ""
+
+#: includes/countries.php:60
+msgid "China"
+msgstr ""
+
+#: includes/countries.php:61
+msgid "Christmas Island"
+msgstr ""
+
+#: includes/countries.php:62
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: includes/countries.php:63
+msgid "Colombia"
+msgstr ""
+
+#: includes/countries.php:64
+msgid "Comoros"
+msgstr ""
+
+#: includes/countries.php:65
+msgid "Congo (Brazzaville)"
+msgstr ""
+
+#: includes/countries.php:66
+msgid "Congo (Kinshasa)"
+msgstr ""
+
+#: includes/countries.php:67
+msgid "Cook Islands"
+msgstr ""
+
+#: includes/countries.php:68
+msgid "Costa Rica"
+msgstr ""
+
+#: includes/countries.php:69
+msgid "Croatia"
+msgstr ""
+
+#: includes/countries.php:70
+msgid "Cuba"
+msgstr ""
+
+#: includes/countries.php:71
+msgid "Cura&Ccedil;ao"
+msgstr ""
+
+#: includes/countries.php:72
+msgid "Cyprus"
+msgstr ""
+
+#: includes/countries.php:73
+msgid "Czech Republic"
+msgstr ""
+
+#: includes/countries.php:74
+msgid "Denmark"
+msgstr ""
+
+#: includes/countries.php:75
+msgid "Djibouti"
+msgstr ""
+
+#: includes/countries.php:76
+msgid "Dominica"
+msgstr ""
+
+#: includes/countries.php:77
+msgid "Dominican Republic"
+msgstr ""
+
+#: includes/countries.php:78
+msgid "Ecuador"
+msgstr ""
+
+#: includes/countries.php:79
+msgid "Egypt"
+msgstr ""
+
+#: includes/countries.php:80
+msgid "El Salvador"
+msgstr ""
+
+#: includes/countries.php:81
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: includes/countries.php:82
+msgid "Eritrea"
+msgstr ""
+
+#: includes/countries.php:83
+msgid "Estonia"
+msgstr ""
+
+#: includes/countries.php:84
+msgid "Ethiopia"
+msgstr ""
+
+#: includes/countries.php:85
+msgid "Falkland Islands"
+msgstr ""
+
+#: includes/countries.php:86
+msgid "Faroe Islands"
+msgstr ""
+
+#: includes/countries.php:87
+msgid "Fiji"
+msgstr ""
+
+#: includes/countries.php:88
+msgid "Finland"
+msgstr ""
+
+#: includes/countries.php:89
+msgid "France"
+msgstr ""
+
+#: includes/countries.php:90
+msgid "French Guiana"
+msgstr ""
+
+#: includes/countries.php:91
+msgid "French Polynesia"
+msgstr ""
+
+#: includes/countries.php:92
+msgid "French Southern Territories"
+msgstr ""
+
+#: includes/countries.php:93
+msgid "Gabon"
+msgstr ""
+
+#: includes/countries.php:94
+msgid "Gambia"
+msgstr ""
+
+#: includes/countries.php:95 includes/states/US.php:16
+msgid "Georgia"
+msgstr ""
+
+#: includes/countries.php:96
+msgid "Germany"
+msgstr ""
+
+#: includes/countries.php:97
+msgid "Ghana"
+msgstr ""
+
+#: includes/countries.php:98
+msgid "Gibraltar"
+msgstr ""
+
+#: includes/countries.php:99
+msgid "Greece"
+msgstr ""
+
+#: includes/countries.php:100
+msgid "Greenland"
+msgstr ""
+
+#: includes/countries.php:101
+msgid "Grenada"
+msgstr ""
+
+#: includes/countries.php:102
+msgid "Guadeloupe"
+msgstr ""
+
+#: includes/countries.php:103
+msgid "Guatemala"
+msgstr ""
+
+#: includes/countries.php:104
+msgid "Guernsey"
+msgstr ""
+
+#: includes/countries.php:105
+msgid "Guinea"
+msgstr ""
+
+#: includes/countries.php:106
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: includes/countries.php:107
+msgid "Guyana"
+msgstr ""
+
+#: includes/countries.php:108
+msgid "Haiti"
+msgstr ""
+
+#: includes/countries.php:109
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: includes/countries.php:110
+msgid "Honduras"
+msgstr ""
+
+#: includes/countries.php:111
+msgid "Hong Kong"
+msgstr ""
+
+#: includes/countries.php:112
+msgid "Hungary"
+msgstr ""
+
+#: includes/countries.php:113
+msgid "Iceland"
+msgstr ""
+
+#: includes/countries.php:114
+msgid "India"
+msgstr ""
+
+#: includes/countries.php:115
+msgid "Indonesia"
+msgstr ""
+
+#: includes/countries.php:116
+msgid "Iran"
+msgstr ""
+
+#: includes/countries.php:117
+msgid "Iraq"
+msgstr ""
+
+#: includes/countries.php:118
+msgid "Republic of Ireland"
+msgstr ""
+
+#: includes/countries.php:119
+msgid "Isle of Man"
+msgstr ""
+
+#: includes/countries.php:120
+msgid "Israel"
+msgstr ""
+
+#: includes/countries.php:121
+msgid "Italy"
+msgstr ""
+
+#: includes/countries.php:122
+msgid "Ivory Coast"
+msgstr ""
+
+#: includes/countries.php:123
+msgid "Jamaica"
+msgstr ""
+
+#: includes/countries.php:124
+msgid "Japan"
+msgstr ""
+
+#: includes/countries.php:125
+msgid "Jersey"
+msgstr ""
+
+#: includes/countries.php:126
+msgid "Jordan"
+msgstr ""
+
+#: includes/countries.php:127
+msgid "Kazakhstan"
+msgstr ""
+
+#: includes/countries.php:128
+msgid "Kenya"
+msgstr ""
+
+#: includes/countries.php:129
+msgid "Kiribati"
+msgstr ""
+
+#: includes/countries.php:130
+msgid "Kuwait"
+msgstr ""
+
+#: includes/countries.php:131
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: includes/countries.php:132
+msgid "Laos"
+msgstr ""
+
+#: includes/countries.php:133
+msgid "Latvia"
+msgstr ""
+
+#: includes/countries.php:134
+msgid "Lebanon"
+msgstr ""
+
+#: includes/countries.php:135
+msgid "Lesotho"
+msgstr ""
+
+#: includes/countries.php:136
+msgid "Liberia"
+msgstr ""
+
+#: includes/countries.php:137
+msgid "Libya"
+msgstr ""
+
+#: includes/countries.php:138
+msgid "Liechtenstein"
+msgstr ""
+
+#: includes/countries.php:139
+msgid "Lithuania"
+msgstr ""
+
+#: includes/countries.php:140
+msgid "Luxembourg"
+msgstr ""
+
+#: includes/countries.php:141
+msgid "Macao S.A.R., China"
+msgstr ""
+
+#: includes/countries.php:142
+msgid "Macedonia"
+msgstr ""
+
+#: includes/countries.php:143
+msgid "Madagascar"
+msgstr ""
+
+#: includes/countries.php:144
+msgid "Malawi"
+msgstr ""
+
+#: includes/countries.php:145
+msgid "Malaysia"
+msgstr ""
+
+#: includes/countries.php:146
+msgid "Maldives"
+msgstr ""
+
+#: includes/countries.php:147
+msgid "Mali"
+msgstr ""
+
+#: includes/countries.php:148
+msgid "Malta"
+msgstr ""
+
+#: includes/countries.php:149
+msgid "Marshall Islands"
+msgstr ""
+
+#: includes/countries.php:150
+msgid "Martinique"
+msgstr ""
+
+#: includes/countries.php:151
+msgid "Mauritania"
+msgstr ""
+
+#: includes/countries.php:152
+msgid "Mauritius"
+msgstr ""
+
+#: includes/countries.php:153
+msgid "Mayotte"
+msgstr ""
+
+#: includes/countries.php:154
+msgid "Mexico"
+msgstr ""
+
+#: includes/countries.php:155
+msgid "Micronesia"
+msgstr ""
+
+#: includes/countries.php:156
+msgid "Moldova"
+msgstr ""
+
+#: includes/countries.php:157
+msgid "Monaco"
+msgstr ""
+
+#: includes/countries.php:158
+msgid "Mongolia"
+msgstr ""
+
+#: includes/countries.php:159
+msgid "Montenegro"
+msgstr ""
+
+#: includes/countries.php:160
+msgid "Montserrat"
+msgstr ""
+
+#: includes/countries.php:161
+msgid "Morocco"
+msgstr ""
+
+#: includes/countries.php:162
+msgid "Mozambique"
+msgstr ""
+
+#: includes/countries.php:163
+msgid "Myanmar"
+msgstr ""
+
+#: includes/countries.php:164
+msgid "Namibia"
+msgstr ""
+
+#: includes/countries.php:165
+msgid "Nauru"
+msgstr ""
+
+#: includes/countries.php:166
+msgid "Nepal"
+msgstr ""
+
+#: includes/countries.php:167
+msgid "Netherlands"
+msgstr ""
+
+#: includes/countries.php:168
+msgid "Netherlands Antilles"
+msgstr ""
+
+#: includes/countries.php:169
+msgid "New Caledonia"
+msgstr ""
+
+#: includes/countries.php:170
+msgid "New Zealand"
+msgstr ""
+
+#: includes/countries.php:171
+msgid "Nicaragua"
+msgstr ""
+
+#: includes/countries.php:172
+msgid "Niger"
+msgstr ""
+
+#: includes/countries.php:173
+msgid "Nigeria"
+msgstr ""
+
+#: includes/countries.php:174
+msgid "Niue"
+msgstr ""
+
+#: includes/countries.php:175
+msgid "Norfolk Island"
+msgstr ""
+
+#: includes/countries.php:176
+msgid "North Korea"
+msgstr ""
+
+#: includes/countries.php:177
+msgid "Norway"
+msgstr ""
+
+#: includes/countries.php:178
+msgid "Oman"
+msgstr ""
+
+#: includes/countries.php:179
+msgid "Pakistan"
+msgstr ""
+
+#: includes/countries.php:180
+msgid "Palestinian Territory"
+msgstr ""
+
+#: includes/countries.php:181
+msgid "Panama"
+msgstr ""
+
+#: includes/countries.php:182
+msgid "Papua New Guinea"
+msgstr ""
+
+#: includes/countries.php:183
+msgid "Paraguay"
+msgstr ""
+
+#: includes/countries.php:184
+msgid "Peru"
+msgstr ""
+
+#: includes/countries.php:185
+msgid "Philippines"
+msgstr ""
+
+#: includes/countries.php:186
+msgid "Pitcairn"
+msgstr ""
+
+#: includes/countries.php:187
+msgid "Poland"
+msgstr ""
+
+#: includes/countries.php:188
+msgid "Portugal"
+msgstr ""
+
+#: includes/countries.php:189
+msgid "Qatar"
+msgstr ""
+
+#: includes/countries.php:190
+msgid "Reunion"
+msgstr ""
+
+#: includes/countries.php:191
+msgid "Romania"
+msgstr ""
+
+#: includes/countries.php:192
+msgid "Russia"
+msgstr ""
+
+#: includes/countries.php:193
+msgid "Rwanda"
+msgstr ""
+
+#: includes/countries.php:194
+msgid "Saint Barth&eacute;lemy"
+msgstr ""
+
+#: includes/countries.php:195
+msgid "Saint Helena"
+msgstr ""
+
+#: includes/countries.php:196
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: includes/countries.php:197
+msgid "Saint Lucia"
+msgstr ""
+
+#: includes/countries.php:198
+msgid "Saint Martin (French part)"
+msgstr ""
+
+#: includes/countries.php:199
+msgid "Saint Martin (Dutch part)"
+msgstr ""
+
+#: includes/countries.php:200
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: includes/countries.php:201
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: includes/countries.php:202
+msgid "San Marino"
+msgstr ""
+
+#: includes/countries.php:203
+msgid "S&atilde;o Tom&eacute; and Pr&iacute;ncipe"
+msgstr ""
+
+#: includes/countries.php:204
+msgid "Saudi Arabia"
+msgstr ""
+
+#: includes/countries.php:205
+msgid "Senegal"
+msgstr ""
+
+#: includes/countries.php:206
+msgid "Serbia"
+msgstr ""
+
+#: includes/countries.php:207
+msgid "Seychelles"
+msgstr ""
+
+#: includes/countries.php:208
+msgid "Sierra Leone"
+msgstr ""
+
+#: includes/countries.php:209
+msgid "Singapore"
+msgstr ""
+
+#: includes/countries.php:210
+msgid "Slovakia"
+msgstr ""
+
+#: includes/countries.php:211
+msgid "Slovenia"
+msgstr ""
+
+#: includes/countries.php:212
+msgid "Solomon Islands"
+msgstr ""
+
+#: includes/countries.php:213
+msgid "Somalia"
+msgstr ""
+
+#: includes/countries.php:214
+msgid "South Africa"
+msgstr ""
+
+#: includes/countries.php:215
+msgid "South Georgia/Sandwich Islands"
+msgstr ""
+
+#: includes/countries.php:216
+msgid "South Korea"
+msgstr ""
+
+#: includes/countries.php:217
+msgid "South Sudan"
+msgstr ""
+
+#: includes/countries.php:218
+msgid "Spain"
+msgstr ""
+
+#: includes/countries.php:219
+msgid "Sri Lanka"
+msgstr ""
+
+#: includes/countries.php:220
+msgid "Sudan"
+msgstr ""
+
+#: includes/countries.php:221
+msgid "Suriname"
+msgstr ""
+
+#: includes/countries.php:222
+msgid "Svalbard and Jan Mayen"
+msgstr ""
+
+#: includes/countries.php:223
+msgid "Swaziland"
+msgstr ""
+
+#: includes/countries.php:224
+msgid "Sweden"
+msgstr ""
+
+#: includes/countries.php:225
+msgid "Switzerland"
+msgstr ""
+
+#: includes/countries.php:226
+msgid "Syria"
+msgstr ""
+
+#: includes/countries.php:227
+msgid "Taiwan"
+msgstr ""
+
+#: includes/countries.php:228
+msgid "Tajikistan"
+msgstr ""
+
+#: includes/countries.php:229
+msgid "Tanzania"
+msgstr ""
+
+#: includes/countries.php:230
+msgid "Thailand"
+msgstr ""
+
+#: includes/countries.php:231
+msgid "Timor-Leste"
+msgstr ""
+
+#: includes/countries.php:232
+msgid "Togo"
+msgstr ""
+
+#: includes/countries.php:233
+msgid "Tokelau"
+msgstr ""
+
+#: includes/countries.php:234
+msgid "Tonga"
+msgstr ""
+
+#: includes/countries.php:235
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: includes/countries.php:236
+msgid "Tunisia"
+msgstr ""
+
+#: includes/countries.php:237
+msgid "Turkey"
+msgstr ""
+
+#: includes/countries.php:238
+msgid "Turkmenistan"
+msgstr ""
+
+#: includes/countries.php:239
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: includes/countries.php:240
+msgid "Tuvalu"
+msgstr ""
+
+#: includes/countries.php:241
+msgid "Uganda"
+msgstr ""
+
+#: includes/countries.php:242
+msgid "Ukraine"
+msgstr ""
+
+#: includes/countries.php:243
+msgid "United Arab Emirates"
+msgstr ""
+
+#: includes/countries.php:244
+msgid "United Kingdom"
+msgstr ""
+
+#: includes/countries.php:245
+msgid "United States"
+msgstr ""
+
+#: includes/countries.php:246
+msgid "Uruguay"
+msgstr ""
+
+#: includes/countries.php:247
+msgid "Uzbekistan"
+msgstr ""
+
+#: includes/countries.php:248
+msgid "Vanuatu"
+msgstr ""
+
+#: includes/countries.php:249
+msgid "Vatican"
+msgstr ""
+
+#: includes/countries.php:250
+msgid "Venezuela"
+msgstr ""
+
+#: includes/countries.php:251
+msgid "Vietnam"
+msgstr ""
+
+#: includes/countries.php:252
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: includes/countries.php:253
+msgid "Western Sahara"
+msgstr ""
+
+#: includes/countries.php:254
+msgid "Western Samoa"
+msgstr ""
+
+#: includes/countries.php:255
+msgid "Yemen"
+msgstr ""
+
+#: includes/countries.php:256
+msgid "Zambia"
+msgstr ""
+
+#: includes/countries.php:257
+msgid "Zimbabwe"
+msgstr ""
+
+#: includes/events-admin.php:60 includes/events-meta-box.php:124
+msgid "Event Details"
+msgstr ""
+
+#: includes/events-admin.php:539
+msgid "WooEvents"
+msgstr ""
+
+#: includes/events-admin.php:539
+msgid "WooEvents™"
+msgstr ""
+
+#: includes/events-admin.php:541 includes/events-settings.php:62
+msgid "Settings"
+msgstr ""
+
+#: includes/events-admin.php:607
+msgid ""
+"<strong>Welcome to Events Calendar & Ticketing</strong> &#8211; You're "
+"almost ready to go :)"
+msgstr ""
+
+#: includes/events-admin.php:608
+msgid "Take me to Settings"
+msgstr ""
+
+#: includes/events-admin.php:609
+msgid "WooEvents&trade; Pro"
+msgstr ""
+
+#: includes/events-meta-box.php:100
+msgid "Event Time &amp; Date"
+msgstr ""
+
+#: includes/events-meta-box.php:105
+msgid "Start date / time"
+msgstr ""
+
+#: includes/events-meta-box.php:110
+msgid "End date / time"
+msgstr ""
+
+#: includes/events-meta-box.php:137
+msgid "Venue"
+msgstr ""
+
+#: includes/events-meta-box.php:139
+msgid ""
+"No venues exist. Before you can select a venue you must create and publish "
+"one"
+msgstr ""
+
+#: includes/events-meta-box.php:142
+msgid "Select a venue"
+msgstr ""
+
+#: includes/events-meta-box.php:147
+msgid " Select the venue at which this event will take place "
+msgstr ""
+
+#: includes/events-meta-box.php:153
+msgid "Display Map"
+msgstr ""
+
+#: includes/events-meta-box.php:154
+msgid "Display a map to the venue on the event's page"
+msgstr ""
+
+#: includes/events-meta-box.php:158
+msgid "Display Details"
+msgstr ""
+
+#: includes/events-meta-box.php:159
+msgid "Display the event organizer's contact info on individual event pages"
+msgstr ""
+
+#: includes/events-meta-box.php:165
+msgid "Event Organizers"
+msgstr ""
+
+#: includes/events-meta-box.php:167
+msgid ""
+"No organizers exist. Before you can add organizers you must create and "
+"publish one"
+msgstr ""
+
+#: includes/events-meta-box.php:174
+msgid " Optionally select organizers that are coordinating the entire event "
+msgstr ""
+
+#: includes/events-meta-box.php:179
+#: templates/ignitewoo-event-details-template.php:425
+msgid "Event Sponsors"
+msgstr ""
+
+#: includes/events-meta-box.php:181
+msgid ""
+"No sponsors exist. Before you can add sponsors you must create and publish "
+"one"
+msgstr ""
+
+#: includes/events-meta-box.php:188
+msgid " Optionally select sponsors that are sponsoring the entire event "
+msgstr ""
+
+#: includes/events-meta-box.php:197
+msgid "Event Speakers"
+msgstr ""
+
+#: includes/events-meta-box.php:199
+msgid ""
+"No speakers exist. Before you can add speakers you must create and publish "
+"one"
+msgstr ""
+
+#: includes/events-meta-box.php:206
+msgid " Optionally select speakers for the event "
+msgstr ""
+
+#: includes/events-meta-box.php:213
+msgid "Event Cost"
+msgstr ""
+
+#: includes/events-post-types-meta.php:54
+msgid "Street Address"
+msgstr ""
+
+#: includes/events-post-types-meta.php:62
+msgid "City"
+msgstr ""
+
+#: includes/events-post-types-meta.php:70
+msgid "State / Country"
+msgstr ""
+
+#: includes/events-post-types-meta.php:94
+msgid "Choose a country&raquo;"
+msgstr ""
+
+#: includes/events-post-types-meta.php:94
+msgid "Country / State"
+msgstr ""
+
+#: includes/events-post-types-meta.php:101
+msgid "Postal Code"
+msgstr ""
+
+#: includes/events-post-types-meta.php:109
+msgid "Phone Number"
+msgstr ""
+
+#: includes/events-post-types-meta.php:117
+msgid "Web Site"
+msgstr ""
+
+#: includes/events-post-types-meta.php:125
+msgid "Email Address"
+msgstr ""
+
+#: includes/events-post-types-meta.php:156
+#: templates/ignitewoo-event-details-template.php:334
+msgid "Organizer Details"
+msgstr ""
+
+#: includes/events-post-types-meta.php:158
+#: templates/ignitewoo-event-details-template.php:194
+msgid "Venue Details"
+msgstr ""
+
+#: includes/events-post-types-meta.php:160
+msgid "Speaker Details"
+msgstr ""
+
+#: includes/events-post-types-meta.php:162
+msgid "Sponsor Details"
+msgstr ""
+
+#: includes/events-post-types.php:213
+msgctxt "slug"
+msgid "event-category"
+msgstr ""
+
+#: includes/events-post-types.php:215
+msgctxt "slug"
+msgid "event-tag"
+msgstr ""
+
+#: includes/events-post-types.php:224
+msgid "Events"
+msgstr ""
+
+#: includes/events-post-types.php:225
+msgid "Event"
+msgstr ""
+
+#: includes/events-post-types.php:226
+msgctxt "Admin menu name"
+msgid "Events"
+msgstr ""
+
+#: includes/events-post-types.php:227
+msgid "Add Event"
+msgstr ""
+
+#: includes/events-post-types.php:228
+msgid "Add New Event"
+msgstr ""
+
+#: includes/events-post-types.php:229
+msgid "Edit"
+msgstr ""
+
+#: includes/events-post-types.php:230
+msgid "Edit Event"
+msgstr ""
+
+#: includes/events-post-types.php:231
+msgid "New Event"
+msgstr ""
+
+#: includes/events-post-types.php:232 includes/events-post-types.php:233
+msgid "View Event"
+msgstr ""
+
+#: includes/events-post-types.php:234
+msgid "Search Events"
+msgstr ""
+
+#: includes/events-post-types.php:235
+msgid "No Events found"
+msgstr ""
+
+#: includes/events-post-types.php:236
+msgid "No Events found in trash"
+msgstr ""
+
+#: includes/events-post-types.php:237
+msgid "Parent Event"
+msgstr ""
+
+#: includes/events-post-types.php:239
+msgid "This is where you can add new products to your store."
+msgstr ""
+
+#: includes/events-post-types.php:259 includes/events-post-types.php:261
+msgid "Event Categories"
+msgstr ""
+
+#: includes/events-post-types.php:262
+msgid "Event Category"
+msgstr ""
+
+#: includes/events-post-types.php:263
+msgctxt "Admin menu name"
+msgid "Categories"
+msgstr ""
+
+#: includes/events-post-types.php:264
+msgid "Search Event Categories"
+msgstr ""
+
+#: includes/events-post-types.php:265
+msgid "All Event Categories"
+msgstr ""
+
+#: includes/events-post-types.php:266
+msgid "Parent Event Category"
+msgstr ""
+
+#: includes/events-post-types.php:267
+msgid "Parent Event Category:"
+msgstr ""
+
+#: includes/events-post-types.php:268
+msgid "Edit Event Category"
+msgstr ""
+
+#: includes/events-post-types.php:269
+msgid "Update Event Category"
+msgstr ""
+
+#: includes/events-post-types.php:270
+msgid "Add New Event Category"
+msgstr ""
+
+#: includes/events-post-types.php:271
+msgid "New Event Category Name"
+msgstr ""
+
+#: includes/events-post-types.php:288 includes/events-post-types.php:290
+msgid "Event Tags"
+msgstr ""
+
+#: includes/events-post-types.php:291
+msgid "Event Tag"
+msgstr ""
+
+#: includes/events-post-types.php:292
+msgctxt "Admin menu name"
+msgid "Tags"
+msgstr ""
+
+#: includes/events-post-types.php:293
+msgid "Search Event Tags"
+msgstr ""
+
+#: includes/events-post-types.php:294
+msgid "All Event Tags"
+msgstr ""
+
+#: includes/events-post-types.php:295
+msgid "Parent Event Tag"
+msgstr ""
+
+#: includes/events-post-types.php:296
+msgid "Parent Event Tag:"
+msgstr ""
+
+#: includes/events-post-types.php:297
+msgid "Edit Event Tag"
+msgstr ""
+
+#: includes/events-post-types.php:298
+msgid "Update Event Tag"
+msgstr ""
+
+#: includes/events-post-types.php:299
+msgid "Add New Event Tag"
+msgstr ""
+
+#: includes/events-post-types.php:300
+msgid "New Event Tag Name"
+msgstr ""
+
+#: includes/events-post-types.php:331
+msgid "Event Start"
+msgstr ""
+
+#: includes/events-post-types.php:333
+msgid "Event End"
+msgstr ""
+
+#: includes/events-settings.php:48
+msgid "IgniteWoo Events Settings"
+msgstr ""
+
+#: includes/events-settings.php:50
+msgid "Configure the settings to control how your events system operates."
+msgstr ""
+
+#: includes/events-settings.php:52
+msgid ""
+"Adjust the settings here. Add new venues, organizers, sponsors, and speakers "
+"using the menu page for those, then add a new product in WooCommerce and "
+"select the \"Event\" option for the product, then configure the event to "
+"suit your needs."
+msgstr ""
+
+#: includes/events-settings.php:79
+msgid "Events Posting"
+msgstr ""
+
+#: includes/events-settings.php:84
+msgid "Events Only"
+msgstr ""
+
+#: includes/events-settings.php:88
+msgid "Events and Tickets"
+msgstr ""
+
+#: includes/events-settings.php:92
+msgid "Tickets Only"
+msgstr ""
+
+#: includes/events-settings.php:102
+msgid "Events Slug"
+msgstr ""
+
+#: includes/events-settings.php:106
+msgid "The slug used in URLs for Events. NOTE: Cannot be blank!"
+msgstr ""
+
+#: includes/events-settings.php:113
+msgid "Event Venue Slug"
+msgstr ""
+
+#: includes/events-settings.php:117
+msgid ""
+"The slug used in URLs for Event Venue categories. NOTE: Cannot be blank!"
+msgstr ""
+
+#: includes/events-settings.php:124
+msgid "Event Organizer Slug"
+msgstr ""
+
+#: includes/events-settings.php:128
+msgid ""
+"The slug used in URLs for Event Organizer categories. NOTE: Cannot be blank!"
+msgstr ""
+
+#: includes/events-settings.php:135
+msgid "Event Sponsor Slug"
+msgstr ""
+
+#: includes/events-settings.php:139
+msgid ""
+"The slug used in URLs for Event Sponsor categories. NOTE: Cannot be blank!"
+msgstr ""
+
+#: includes/events-settings.php:146
+msgid "Event Speaker Slug"
+msgstr ""
+
+#: includes/events-settings.php:150
+msgid ""
+"The slug used in URLs for Event Speaker categories. NOTE: Cannot be blank!"
+msgstr ""
+
+#: includes/events-settings.php:157
+msgid "Expired Events"
+msgstr ""
+
+#: includes/events-settings.php:160
+msgid "Draft"
+msgstr ""
+
+#: includes/events-settings.php:162
+msgid "Trash"
+msgstr ""
+
+#: includes/events-settings.php:164
+msgid "Do nothing"
+msgstr ""
+
+#: includes/events-settings.php:166
+msgid ""
+"When events expire you can either have them marked as Draft or Trash, or "
+"neither."
+msgstr ""
+
+#: includes/events-settings.php:168
+msgid ""
+"Note that if you choose to move items to the trash, any associated recurring "
+"settings from WooEvents Pro will be deleted from the item."
+msgstr ""
+
+#: includes/events-settings.php:170
+msgid ""
+"Also note that any items that are republished MUST have the expiration date "
+"reset to the future to avoid becoming expired again immediately."
+msgstr ""
+
+#: includes/events-settings.php:177
+msgid "Default Event Date Format"
+msgstr ""
+
+#: includes/events-settings.php:183
+msgid "Dec 7, 2014"
+msgstr ""
+
+#: includes/events-settings.php:184
+msgid "7 Dec 2014"
+msgstr ""
+
+#: includes/events-settings.php:185
+msgid "7 Dec 14"
+msgstr ""
+
+#: includes/events-settings.php:187
+msgid ""
+"This setting will be used when display dates on the public site ( see <a "
+"href=\"http://www.php.net/manual/en/function.date.php\" target=\"_blank"
+"\">PHP date function</a> for formatting possibilities )"
+msgstr ""
+
+#: includes/events-settings.php:188 includes/events-settings.php:203
+msgid ""
+"NOTE: Changing this setting will not update existing recurring event "
+"variation dates. You must edit the variation attributes manually."
+msgstr ""
+
+#: includes/events-settings.php:194
+msgid "Default Event Time Format"
+msgstr ""
+
+#: includes/events-settings.php:202
+msgid ""
+"This setting will be used when display times on the public site ( see <a "
+"href=\"http://www.php.net/manual/en/function.date.php\" target=\"_blank"
+"\">PHP date function</a> for formatting possibilities )"
+msgstr ""
+
+#: includes/events-settings.php:211
+msgid "Default Event Start Time"
+msgstr ""
+
+#: includes/events-settings.php:215
+msgid ""
+"This setting will be prepopulate into event settings when creating a new "
+"event. ( Example: 9:00 pm )"
+msgstr ""
+
+#: includes/events-settings.php:222
+msgid "Default Event End Time"
+msgstr ""
+
+#: includes/events-settings.php:226
+msgid ""
+"This setting will be prepopulate into event settings when creating a new "
+"event. ( Example: 5:00 pm )"
+msgstr ""
+
+#: includes/events-settings.php:233
+msgid "Default Display Organizer"
+msgstr ""
+
+#: includes/events-settings.php:237
+msgid ""
+"When enabled the default \"Display Organizer\" setting for new events will "
+"be turned on. You can turn this off when editing any individual event."
+msgstr ""
+
+#: includes/events-settings.php:244
+msgid "Google Map Width"
+msgstr ""
+
+#: includes/events-settings.php:248 includes/events-settings.php:259
+msgid "Enter a numeric value or percent value"
+msgstr ""
+
+#: includes/events-settings.php:255
+msgid "Google Map Height"
+msgstr ""
+
+#: includes/events-settings.php:266
+msgid "Google Map Zoom"
+msgstr ""
+
+#: includes/events-settings.php:270
+msgid "Enter a number between 1 and 15"
+msgstr ""
+
+#: includes/events-settings.php:283
+msgid "Currency Symbol"
+msgstr ""
+
+#: includes/events-settings.php:287
+msgid ""
+"Enter your currency symbol to be displayed when events have a cost involved."
+msgstr ""
+
+#: includes/events-settings.php:294
+msgid "Currency Symbol Location"
+msgstr ""
+
+#: includes/events-settings.php:297
+msgid "Left of amount"
+msgstr ""
+
+#: includes/events-settings.php:298
+msgid "Right of amount"
+msgstr ""
+
+#: includes/events-settings.php:299
+msgid "Select the currency symbol location."
+msgstr ""
+
+#: includes/events-settings.php:330
+msgid "Update Settings"
+msgstr ""
+
+#: includes/events-widgets.php:23
+msgid "Display a list of upcoming events on your site."
+msgstr ""
+
+#: includes/events-widgets.php:27
+msgid "Event Calendar Upcoming Events"
+msgstr ""
+
+#: includes/events-widgets.php:60
+msgid "Upcoming Events"
+msgstr ""
+
+#: includes/events-widgets.php:197
+msgid "No upcoming events"
+msgstr ""
+
+#: includes/events-widgets.php:253
+msgid "Title:"
+msgstr ""
+
+#: includes/events-widgets.php:258
+msgid "Number of events to show:"
+msgstr ""
+
+#: includes/events-widgets.php:265
+msgid ""
+"Show all recurrences for recurring events. When disabled only the next "
+"recurrence will be shown."
+msgstr ""
+
+#: includes/states/AU.php:6
+msgid "Australian Capital Territory"
+msgstr ""
+
+#: includes/states/AU.php:7
+msgid "New South Wales"
+msgstr ""
+
+#: includes/states/AU.php:8
+msgid "Northern Territory"
+msgstr ""
+
+#: includes/states/AU.php:9
+msgid "Queensland"
+msgstr ""
+
+#: includes/states/AU.php:10
+msgid "South Australia"
+msgstr ""
+
+#: includes/states/AU.php:11
+msgid "Tasmania"
+msgstr ""
+
+#: includes/states/AU.php:12
+msgid "Victoria"
+msgstr ""
+
+#: includes/states/AU.php:13
+msgid "Western Australia"
+msgstr ""
+
+#: includes/states/BR.php:6
+msgid "Acre"
+msgstr ""
+
+#: includes/states/BR.php:7
+msgid "Alagoas"
+msgstr ""
+
+#: includes/states/BR.php:8
+msgid "Amap&aacute;"
+msgstr ""
+
+#: includes/states/BR.php:9
+msgid "Amazonas"
+msgstr ""
+
+#: includes/states/BR.php:10
+msgid "Bahia"
+msgstr ""
+
+#: includes/states/BR.php:11
+msgid "Cear&aacute;"
+msgstr ""
+
+#: includes/states/BR.php:12
+msgid "Distrito Federal"
+msgstr ""
+
+#: includes/states/BR.php:13
+msgid "Esp&iacute;rito Santo"
+msgstr ""
+
+#: includes/states/BR.php:14
+msgid "Goi&aacute;s"
+msgstr ""
+
+#: includes/states/BR.php:15
+msgid "Maranh&atilde;o"
+msgstr ""
+
+#: includes/states/BR.php:16
+msgid "Mato Grosso"
+msgstr ""
+
+#: includes/states/BR.php:17
+msgid "Mato Grosso do Sul"
+msgstr ""
+
+#: includes/states/BR.php:18
+msgid "Minas Gerais"
+msgstr ""
+
+#: includes/states/BR.php:19
+msgid "Par&aacute;"
+msgstr ""
+
+#: includes/states/BR.php:20
+msgid "Para&iacute;ba"
+msgstr ""
+
+#: includes/states/BR.php:21
+msgid "Paran&aacute;"
+msgstr ""
+
+#: includes/states/BR.php:22
+msgid "Pernambuco"
+msgstr ""
+
+#: includes/states/BR.php:23
+msgid "Piau&iacute;"
+msgstr ""
+
+#: includes/states/BR.php:24
+msgid "Rio de Janeiro"
+msgstr ""
+
+#: includes/states/BR.php:25
+msgid "Rio Grande do Norte"
+msgstr ""
+
+#: includes/states/BR.php:26
+msgid "Rio Grande do Sul"
+msgstr ""
+
+#: includes/states/BR.php:27
+msgid "Rond&ocirc;nia"
+msgstr ""
+
+#: includes/states/BR.php:28
+msgid "Roraima"
+msgstr ""
+
+#: includes/states/BR.php:29
+msgid "Santa Catarina"
+msgstr ""
+
+#: includes/states/BR.php:30
+msgid "S&atilde;o Paulo"
+msgstr ""
+
+#: includes/states/BR.php:31
+msgid "Sergipe"
+msgstr ""
+
+#: includes/states/BR.php:32
+msgid "Tocantins"
+msgstr ""
+
+#: includes/states/CA.php:6
+msgid "Alberta"
+msgstr ""
+
+#: includes/states/CA.php:7
+msgid "British Columbia"
+msgstr ""
+
+#: includes/states/CA.php:8
+msgid "Manitoba"
+msgstr ""
+
+#: includes/states/CA.php:9
+msgid "New Brunswick"
+msgstr ""
+
+#: includes/states/CA.php:10
+msgid "Newfoundland"
+msgstr ""
+
+#: includes/states/CA.php:11
+msgid "Northwest Territories"
+msgstr ""
+
+#: includes/states/CA.php:12
+msgid "Nova Scotia"
+msgstr ""
+
+#: includes/states/CA.php:13
+msgid "Nunavut"
+msgstr ""
+
+#: includes/states/CA.php:14
+msgid "Ontario"
+msgstr ""
+
+#: includes/states/CA.php:15
+msgid "Prince Edward Island"
+msgstr ""
+
+#: includes/states/CA.php:16
+msgid "Quebec"
+msgstr ""
+
+#: includes/states/CA.php:17
+msgid "Saskatchewan"
+msgstr ""
+
+#: includes/states/CA.php:18
+msgid "Yukon Territory"
+msgstr ""
+
+#: includes/states/CN.php:6
+msgid "Yunnan / &#20113;&#21335;"
+msgstr ""
+
+#: includes/states/CN.php:7
+msgid "Beijing / &#21271;&#20140;"
+msgstr ""
+
+#: includes/states/CN.php:8
+msgid "Tianjin / &#22825;&#27941;"
+msgstr ""
+
+#: includes/states/CN.php:9
+msgid "Hebei / &#27827;&#21271;"
+msgstr ""
+
+#: includes/states/CN.php:10
+msgid "Shanxi / &#23665;&#35199;"
+msgstr ""
+
+#: includes/states/CN.php:11
+msgid "Inner Mongolia / &#20839;&#33945;&#21476;"
+msgstr ""
+
+#: includes/states/CN.php:12
+msgid "Liaoning / &#36797;&#23425;"
+msgstr ""
+
+#: includes/states/CN.php:13
+msgid "Jilin / &#21513;&#26519;"
+msgstr ""
+
+#: includes/states/CN.php:14
+msgid "Heilongjiang / &#40657;&#40857;&#27743;"
+msgstr ""
+
+#: includes/states/CN.php:15
+msgid "Shanghai / &#19978;&#28023;"
+msgstr ""
+
+#: includes/states/CN.php:16
+msgid "Jiangsu / &#27743;&#33487;"
+msgstr ""
+
+#: includes/states/CN.php:17
+msgid "Zhejiang / &#27993;&#27743;"
+msgstr ""
+
+#: includes/states/CN.php:18
+msgid "Anhui / &#23433;&#24509;"
+msgstr ""
+
+#: includes/states/CN.php:19
+msgid "Fujian / &#31119;&#24314;"
+msgstr ""
+
+#: includes/states/CN.php:20
+msgid "Jiangxi / &#27743;&#35199;"
+msgstr ""
+
+#: includes/states/CN.php:21
+msgid "Shandong / &#23665;&#19996;"
+msgstr ""
+
+#: includes/states/CN.php:22
+msgid "Henan / &#27827;&#21335;"
+msgstr ""
+
+#: includes/states/CN.php:23
+msgid "Hubei / &#28246;&#21271;"
+msgstr ""
+
+#: includes/states/CN.php:24
+msgid "Hunan / &#28246;&#21335;"
+msgstr ""
+
+#: includes/states/CN.php:25
+msgid "Guangdong / &#24191;&#19996;"
+msgstr ""
+
+#: includes/states/CN.php:26
+msgid "Guangxi Zhuang / &#24191;&#35199;&#22766;&#26063;"
+msgstr ""
+
+#: includes/states/CN.php:27
+msgid "Hainan / &#28023;&#21335;"
+msgstr ""
+
+#: includes/states/CN.php:28
+msgid "Chongqing / &#37325;&#24198;"
+msgstr ""
+
+#: includes/states/CN.php:29
+msgid "Sichuan / &#22235;&#24029;"
+msgstr ""
+
+#: includes/states/CN.php:30
+msgid "Guizhou / &#36149;&#24030;"
+msgstr ""
+
+#: includes/states/CN.php:31
+msgid "Shaanxi / &#38485;&#35199;"
+msgstr ""
+
+#: includes/states/CN.php:32
+msgid "Gansu / &#29976;&#32899;"
+msgstr ""
+
+#: includes/states/CN.php:33
+msgid "Qinghai / &#38738;&#28023;"
+msgstr ""
+
+#: includes/states/CN.php:34
+msgid "Ningxia Hui / &#23425;&#22799;"
+msgstr ""
+
+#: includes/states/CN.php:35
+msgid "Macau / &#28595;&#38376;"
+msgstr ""
+
+#: includes/states/CN.php:36
+msgid "Tibet / &#35199;&#34255;"
+msgstr ""
+
+#: includes/states/CN.php:37
+msgid "Xinjiang / &#26032;&#30086;"
+msgstr ""
+
+#: includes/states/ES.php:6
+msgid "A Coru&ntilde;a"
+msgstr ""
+
+#: includes/states/ES.php:7
+msgid "&Aacute;lava"
+msgstr ""
+
+#: includes/states/ES.php:8
+msgid "Albacete"
+msgstr ""
+
+#: includes/states/ES.php:9
+msgid "Alicante"
+msgstr ""
+
+#: includes/states/ES.php:10
+msgid "Almer&iacute;a"
+msgstr ""
+
+#: includes/states/ES.php:11
+msgid "Asturias"
+msgstr ""
+
+#: includes/states/ES.php:12
+msgid "&Aacute;vila"
+msgstr ""
+
+#: includes/states/ES.php:13
+msgid "Badajoz"
+msgstr ""
+
+#: includes/states/ES.php:14
+msgid "Baleares"
+msgstr ""
+
+#: includes/states/ES.php:15
+msgid "Barcelona"
+msgstr ""
+
+#: includes/states/ES.php:16
+msgid "Burgos"
+msgstr ""
+
+#: includes/states/ES.php:17
+msgid "C&aacute;ceres"
+msgstr ""
+
+#: includes/states/ES.php:18
+msgid "C&aacute;diz"
+msgstr ""
+
+#: includes/states/ES.php:19
+msgid "Cantabria"
+msgstr ""
+
+#: includes/states/ES.php:20
+msgid "Castell&oacute;n"
+msgstr ""
+
+#: includes/states/ES.php:21
+msgid "Ceuta"
+msgstr ""
+
+#: includes/states/ES.php:22
+msgid "Ciudad Real"
+msgstr ""
+
+#: includes/states/ES.php:23
+msgid "C&oacute;rdoba"
+msgstr ""
+
+#: includes/states/ES.php:24
+msgid "Cuenca"
+msgstr ""
+
+#: includes/states/ES.php:25
+msgid "Girona"
+msgstr ""
+
+#: includes/states/ES.php:26
+msgid "Granada"
+msgstr ""
+
+#: includes/states/ES.php:27
+msgid "Guadalajara"
+msgstr ""
+
+#: includes/states/ES.php:28
+msgid "Guip&uacute;zcoa"
+msgstr ""
+
+#: includes/states/ES.php:29
+msgid "Huelva"
+msgstr ""
+
+#: includes/states/ES.php:30
+msgid "Huesca"
+msgstr ""
+
+#: includes/states/ES.php:31
+msgid "Ja&eacute;n"
+msgstr ""
+
+#: includes/states/ES.php:32
+msgid "La Rioja"
+msgstr ""
+
+#: includes/states/ES.php:33
+msgid "Las Palmas"
+msgstr ""
+
+#: includes/states/ES.php:34
+msgid "Le&oacute;n"
+msgstr ""
+
+#: includes/states/ES.php:35
+msgid "Lleida"
+msgstr ""
+
+#: includes/states/ES.php:36
+msgid "Lugo"
+msgstr ""
+
+#: includes/states/ES.php:37
+msgid "Madrid"
+msgstr ""
+
+#: includes/states/ES.php:38
+msgid "M&aacute;laga"
+msgstr ""
+
+#: includes/states/ES.php:39
+msgid "Melilla"
+msgstr ""
+
+#: includes/states/ES.php:40
+msgid "Murcia"
+msgstr ""
+
+#: includes/states/ES.php:41
+msgid "Navarra"
+msgstr ""
+
+#: includes/states/ES.php:42
+msgid "Ourense"
+msgstr ""
+
+#: includes/states/ES.php:43
+msgid "Palencia"
+msgstr ""
+
+#: includes/states/ES.php:44
+msgid "Pontevedra"
+msgstr ""
+
+#: includes/states/ES.php:45
+msgid "Salamanca"
+msgstr ""
+
+#: includes/states/ES.php:46
+msgid "Santa Cruz de Tenerife"
+msgstr ""
+
+#: includes/states/ES.php:47
+msgid "Segovia"
+msgstr ""
+
+#: includes/states/ES.php:48
+msgid "Sevilla"
+msgstr ""
+
+#: includes/states/ES.php:49
+msgid "Soria"
+msgstr ""
+
+#: includes/states/ES.php:50
+msgid "Tarragona"
+msgstr ""
+
+#: includes/states/ES.php:51
+msgid "Teruel"
+msgstr ""
+
+#: includes/states/ES.php:52
+msgid "Toledo"
+msgstr ""
+
+#: includes/states/ES.php:53
+msgid "Valencia"
+msgstr ""
+
+#: includes/states/ES.php:54
+msgid "Valladolid"
+msgstr ""
+
+#: includes/states/ES.php:55
+msgid "Vizcaya"
+msgstr ""
+
+#: includes/states/ES.php:56
+msgid "Zamora"
+msgstr ""
+
+#: includes/states/ES.php:57
+msgid "Zaragoza"
+msgstr ""
+
+#: includes/states/HK.php:6
+msgid "Hong Kong Island"
+msgstr ""
+
+#: includes/states/HK.php:7
+msgid "Kowloon"
+msgstr ""
+
+#: includes/states/HK.php:8
+msgid "New Territories"
+msgstr ""
+
+#: includes/states/HU.php:6
+msgid "Bács-Kiskun"
+msgstr ""
+
+#: includes/states/HU.php:7
+msgid "Békés"
+msgstr ""
+
+#: includes/states/HU.php:8
+msgid "Baranya"
+msgstr ""
+
+#: includes/states/HU.php:9
+msgid "Borsod-Abaúj-Zemplén"
+msgstr ""
+
+#: includes/states/HU.php:10
+msgid "Budapest"
+msgstr ""
+
+#: includes/states/HU.php:11
+msgid "Csongrád"
+msgstr ""
+
+#: includes/states/HU.php:12
+msgid "Fejér"
+msgstr ""
+
+#: includes/states/HU.php:13
+msgid "Győr-Moson-Sopron"
+msgstr ""
+
+#: includes/states/HU.php:14
+msgid "Hajdú-Bihar"
+msgstr ""
+
+#: includes/states/HU.php:15
+msgid "Heves"
+msgstr ""
+
+#: includes/states/HU.php:16
+msgid "Jász-Nagykun-Szolnok"
+msgstr ""
+
+#: includes/states/HU.php:17
+msgid "Komárom-Esztergom"
+msgstr ""
+
+#: includes/states/HU.php:18
+msgid "Nógrád"
+msgstr ""
+
+#: includes/states/HU.php:19
+msgid "Pest"
+msgstr ""
+
+#: includes/states/HU.php:20
+msgid "Somogy"
+msgstr ""
+
+#: includes/states/HU.php:21
+msgid "Szabolcs-Szatmár-Bereg"
+msgstr ""
+
+#: includes/states/HU.php:22
+msgid "Tolna"
+msgstr ""
+
+#: includes/states/HU.php:23
+msgid "Vas"
+msgstr ""
+
+#: includes/states/HU.php:24
+msgid "Veszprém"
+msgstr ""
+
+#: includes/states/HU.php:25
+msgid "Zala"
+msgstr ""
+
+#: includes/states/HZ.php:6 includes/states/NZ.php:7
+msgid "Auckland"
+msgstr ""
+
+#: includes/states/HZ.php:7 includes/states/NZ.php:9
+msgid "Bay of Plenty"
+msgstr ""
+
+#: includes/states/HZ.php:8 includes/states/NZ.php:18
+msgid "Canterbury"
+msgstr ""
+
+#: includes/states/HZ.php:9 includes/states/NZ.php:11
+msgid "Hawke&rsquo;s Bay"
+msgstr ""
+
+#: includes/states/HZ.php:10 includes/states/NZ.php:12
+msgid "Manawatu-Wanganui"
+msgstr ""
+
+#: includes/states/HZ.php:11 includes/states/NZ.php:15
+msgid "Marlborough"
+msgstr ""
+
+#: includes/states/HZ.php:12 includes/states/NZ.php:14
+msgid "Nelson"
+msgstr ""
+
+#: includes/states/HZ.php:13 includes/states/NZ.php:6
+msgid "Northland"
+msgstr ""
+
+#: includes/states/HZ.php:14 includes/states/NZ.php:19
+msgid "Otago"
+msgstr ""
+
+#: includes/states/HZ.php:15 includes/states/NZ.php:20
+msgid "Southland"
+msgstr ""
+
+#: includes/states/HZ.php:16 includes/states/NZ.php:10
+msgid "Taranaki"
+msgstr ""
+
+#: includes/states/HZ.php:17 includes/states/NZ.php:16
+msgid "Tasman"
+msgstr ""
+
+#: includes/states/HZ.php:18 includes/states/NZ.php:8
+msgid "Waikato"
+msgstr ""
+
+#: includes/states/HZ.php:19 includes/states/NZ.php:13
+msgid "Wellington"
+msgstr ""
+
+#: includes/states/HZ.php:20 includes/states/NZ.php:17
+msgid "West Coast"
+msgstr ""
+
+#: includes/states/ID.php:6
+msgid "Daerah Istimewa Aceh"
+msgstr ""
+
+#: includes/states/ID.php:7
+msgid "Sumatera Utara"
+msgstr ""
+
+#: includes/states/ID.php:8
+msgid "Sumatera Barat"
+msgstr ""
+
+#: includes/states/ID.php:9
+msgid "Riau"
+msgstr ""
+
+#: includes/states/ID.php:10
+msgid "Kepulauan Riau"
+msgstr ""
+
+#: includes/states/ID.php:11
+msgid "Jambi"
+msgstr ""
+
+#: includes/states/ID.php:12
+msgid "Sumatera Selatan"
+msgstr ""
+
+#: includes/states/ID.php:13
+msgid "Bangka Belitung"
+msgstr ""
+
+#: includes/states/ID.php:14
+msgid "Bengkulu"
+msgstr ""
+
+#: includes/states/ID.php:15
+msgid "Lampung"
+msgstr ""
+
+#: includes/states/ID.php:16
+msgid "DKI Jakarta"
+msgstr ""
+
+#: includes/states/ID.php:17
+msgid "Jawa Barat"
+msgstr ""
+
+#: includes/states/ID.php:18
+msgid "Banten"
+msgstr ""
+
+#: includes/states/ID.php:19
+msgid "Jawa Tengah"
+msgstr ""
+
+#: includes/states/ID.php:20
+msgid "Jawa Timur"
+msgstr ""
+
+#: includes/states/ID.php:21
+msgid "Daerah Istimewa Yogyakarta"
+msgstr ""
+
+#: includes/states/ID.php:22
+msgid "Bali"
+msgstr ""
+
+#: includes/states/ID.php:23
+msgid "Nusa Tenggara Barat"
+msgstr ""
+
+#: includes/states/ID.php:24
+msgid "Nusa Tenggara Timur"
+msgstr ""
+
+#: includes/states/ID.php:25
+msgid "Kalimantan Barat"
+msgstr ""
+
+#: includes/states/ID.php:26
+msgid "Kalimantan Tengah"
+msgstr ""
+
+#: includes/states/ID.php:27
+msgid "Kalimantan Timur"
+msgstr ""
+
+#: includes/states/ID.php:28
+msgid "Kalimantan Selatan"
+msgstr ""
+
+#: includes/states/ID.php:29
+msgid "Kalimantan Utara"
+msgstr ""
+
+#: includes/states/ID.php:30
+msgid "Sulawesi Utara"
+msgstr ""
+
+#: includes/states/ID.php:31
+msgid "Sulawesi Tengah"
+msgstr ""
+
+#: includes/states/ID.php:32
+msgid "Sulawesi Tenggara"
+msgstr ""
+
+#: includes/states/ID.php:33
+msgid "Sulawesi Barat"
+msgstr ""
+
+#: includes/states/ID.php:34
+msgid "Sulawesi Selatan"
+msgstr ""
+
+#: includes/states/ID.php:35
+msgid "Gorontalo"
+msgstr ""
+
+#: includes/states/ID.php:36
+msgid "Maluku"
+msgstr ""
+
+#: includes/states/ID.php:37
+msgid "Maluku Utara"
+msgstr ""
+
+#: includes/states/ID.php:38
+msgid "Papua"
+msgstr ""
+
+#: includes/states/ID.php:39
+msgid "Papua Barat"
+msgstr ""
+
+#: includes/states/IN.php:6
+msgid "Andra Pradesh"
+msgstr ""
+
+#: includes/states/IN.php:7
+msgid "Arunachal Pradesh"
+msgstr ""
+
+#: includes/states/IN.php:8
+msgid "Assam"
+msgstr ""
+
+#: includes/states/IN.php:9
+msgid "Bihar"
+msgstr ""
+
+#: includes/states/IN.php:10
+msgid "Chhattisgarh"
+msgstr ""
+
+#: includes/states/IN.php:11
+msgid "Goa"
+msgstr ""
+
+#: includes/states/IN.php:12
+msgid "Gujarat"
+msgstr ""
+
+#: includes/states/IN.php:13
+msgid "Haryana"
+msgstr ""
+
+#: includes/states/IN.php:14
+msgid "Himachal Pradesh"
+msgstr ""
+
+#: includes/states/IN.php:15
+msgid "Jammu and Kashmir"
+msgstr ""
+
+#: includes/states/IN.php:16
+msgid "Jharkhand"
+msgstr ""
+
+#: includes/states/IN.php:17
+msgid "Karnataka"
+msgstr ""
+
+#: includes/states/IN.php:18
+msgid "Kerala"
+msgstr ""
+
+#: includes/states/IN.php:19
+msgid "Madhya Pradesh"
+msgstr ""
+
+#: includes/states/IN.php:20
+msgid "Maharashtra"
+msgstr ""
+
+#: includes/states/IN.php:21
+msgid "Manipur"
+msgstr ""
+
+#: includes/states/IN.php:22
+msgid "Meghalaya"
+msgstr ""
+
+#: includes/states/IN.php:23
+msgid "Mizoram"
+msgstr ""
+
+#: includes/states/IN.php:24
+msgid "Nagaland"
+msgstr ""
+
+#: includes/states/IN.php:25
+msgid "Orissa"
+msgstr ""
+
+#: includes/states/IN.php:26
+msgid "Punjab"
+msgstr ""
+
+#: includes/states/IN.php:27
+msgid "Rajasthan"
+msgstr ""
+
+#: includes/states/IN.php:28
+msgid "Sikkim"
+msgstr ""
+
+#: includes/states/IN.php:29
+msgid "Tamil Nadu"
+msgstr ""
+
+#: includes/states/IN.php:30
+msgid "Tripura"
+msgstr ""
+
+#: includes/states/IN.php:31
+msgid "Uttaranchal"
+msgstr ""
+
+#: includes/states/IN.php:32
+msgid "Uttar Pradesh"
+msgstr ""
+
+#: includes/states/IN.php:33
+msgid "West Bengal"
+msgstr ""
+
+#: includes/states/IN.php:34
+msgid "Andaman and Nicobar Islands"
+msgstr ""
+
+#: includes/states/IN.php:35
+msgid "Chandigarh"
+msgstr ""
+
+#: includes/states/IN.php:36
+msgid "Dadar and Nagar Haveli"
+msgstr ""
+
+#: includes/states/IN.php:37
+msgid "Daman and Diu"
+msgstr ""
+
+#: includes/states/IN.php:38
+msgid "Delhi"
+msgstr ""
+
+#: includes/states/IN.php:39
+msgid "Lakshadeep"
+msgstr ""
+
+#: includes/states/IN.php:40
+msgid "Pondicherry (Puducherry)"
+msgstr ""
+
+#: includes/states/MY.php:6
+msgid "Johor"
+msgstr ""
+
+#: includes/states/MY.php:7
+msgid "Kedah"
+msgstr ""
+
+#: includes/states/MY.php:8
+msgid "Kelantan"
+msgstr ""
+
+#: includes/states/MY.php:9
+msgid "Melaka"
+msgstr ""
+
+#: includes/states/MY.php:10
+msgid "Negeri Sembilan"
+msgstr ""
+
+#: includes/states/MY.php:11
+msgid "Pahang"
+msgstr ""
+
+#: includes/states/MY.php:12
+msgid "Perak"
+msgstr ""
+
+#: includes/states/MY.php:13
+msgid "Perlis"
+msgstr ""
+
+#: includes/states/MY.php:14
+msgid "Pulau Pinang"
+msgstr ""
+
+#: includes/states/MY.php:15
+msgid "Sabah"
+msgstr ""
+
+#: includes/states/MY.php:16
+msgid "Sarawak"
+msgstr ""
+
+#: includes/states/MY.php:17
+msgid "Selangor"
+msgstr ""
+
+#: includes/states/MY.php:18
+msgid "Terengganu"
+msgstr ""
+
+#: includes/states/MY.php:19
+msgid "W.P. Kuala Lumpur"
+msgstr ""
+
+#: includes/states/MY.php:20
+msgid "W.P. Labuan"
+msgstr ""
+
+#: includes/states/MY.php:21
+msgid "W.P. Putrajaya"
+msgstr ""
+
+#: includes/states/TH.php:6
+msgid ""
+"Amnat Charoen (&#3629;&#3635;&#3609;&#3634;&#3592;&#3648;&#3592;&#3619;"
+"&#3636;&#3597;)"
+msgstr ""
+
+#: includes/states/TH.php:7
+msgid "Ang Thong (&#3629;&#3656;&#3634;&#3591;&#3607;&#3629;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:8
+msgid ""
+"Ayutthaya (&#3614;&#3619;&#3632;&#3609;&#3588;&#3619;&#3624;&#3619;&#3637;"
+"&#3629;&#3618;&#3640;&#3608;&#3618;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:9
+msgid ""
+"Bangkok (&#3585;&#3619;&#3640;&#3591;&#3648;&#3607;&#3614;&#3617;&#3627;"
+"&#3634;&#3609;&#3588;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:10
+msgid "Bueng Kan (&#3610;&#3638;&#3591;&#3585;&#3634;&#3628;)"
+msgstr ""
+
+#: includes/states/TH.php:11
+msgid ""
+"Buri Ram (&#3610;&#3640;&#3619;&#3637;&#3619;&#3633;&#3617;&#3618;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:12
+msgid ""
+"Chachoengsao (&#3593;&#3632;&#3648;&#3594;&#3636;&#3591;&#3648;&#3607;&#3619;"
+"&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:13
+msgid "Chai Nat (&#3594;&#3633;&#3618;&#3609;&#3634;&#3607;)"
+msgstr ""
+
+#: includes/states/TH.php:14
+msgid "Chaiyaphum (&#3594;&#3633;&#3618;&#3616;&#3641;&#3617;&#3636;)"
+msgstr ""
+
+#: includes/states/TH.php:15
+msgid "Chanthaburi (&#3592;&#3633;&#3609;&#3607;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:16
+msgid ""
+"Chiang Mai (&#3648;&#3594;&#3637;&#3618;&#3591;&#3651;&#3627;&#3617;&#3656;)"
+msgstr ""
+
+#: includes/states/TH.php:17
+msgid "Chiang Rai (&#3648;&#3594;&#3637;&#3618;&#3591;&#3619;&#3634;&#3618;)"
+msgstr ""
+
+#: includes/states/TH.php:18
+msgid "Chonburi (&#3594;&#3621;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:19
+msgid "Chumphon (&#3594;&#3640;&#3617;&#3614;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:20
+msgid ""
+"Kalasin (&#3585;&#3634;&#3628;&#3626;&#3636;&#3609;&#3608;&#3640;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:21
+msgid ""
+"Kamphaeng Phet (&#3585;&#3635;&#3649;&#3614;&#3591;&#3648;&#3614;&#3594;"
+"&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:22
+msgid ""
+"Kanchanaburi (&#3585;&#3634;&#3597;&#3592;&#3609;&#3610;&#3640;&#3619;"
+"&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:23
+msgid "Khon Kaen (&#3586;&#3629;&#3609;&#3649;&#3585;&#3656;&#3609;)"
+msgstr ""
+
+#: includes/states/TH.php:24
+msgid "Krabi (&#3585;&#3619;&#3632;&#3610;&#3637;&#3656;)"
+msgstr ""
+
+#: includes/states/TH.php:25
+msgid "Lampang (&#3621;&#3635;&#3611;&#3634;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:26
+msgid "Lamphun (&#3621;&#3635;&#3614;&#3641;&#3609;)"
+msgstr ""
+
+#: includes/states/TH.php:27
+msgid "Loei (&#3648;&#3621;&#3618;)"
+msgstr ""
+
+#: includes/states/TH.php:28
+msgid "Lopburi (&#3621;&#3614;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:29
+msgid ""
+"Mae Hong Son (&#3649;&#3617;&#3656;&#3630;&#3656;&#3629;&#3591;&#3626;&#3629;"
+"&#3609;)"
+msgstr ""
+
+#: includes/states/TH.php:30
+msgid ""
+"Maha Sarakham (&#3617;&#3627;&#3634;&#3626;&#3634;&#3619;&#3588;&#3634;"
+"&#3617;)"
+msgstr ""
+
+#: includes/states/TH.php:31
+msgid "Mukdahan (&#3617;&#3640;&#3585;&#3604;&#3634;&#3627;&#3634;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:32
+msgid "Nakhon Nayok (&#3609;&#3588;&#3619;&#3609;&#3634;&#3618;&#3585;)"
+msgstr ""
+
+#: includes/states/TH.php:33
+msgid "Nakhon Pathom (&#3609;&#3588;&#3619;&#3611;&#3600;&#3617;)"
+msgstr ""
+
+#: includes/states/TH.php:34
+msgid "Nakhon Phanom (&#3609;&#3588;&#3619;&#3614;&#3609;&#3617;)"
+msgstr ""
+
+#: includes/states/TH.php:35
+msgid ""
+"Nakhon Ratchasima (&#3609;&#3588;&#3619;&#3619;&#3634;&#3594;&#3626;&#3637;"
+"&#3617;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:36
+msgid ""
+"Nakhon Sawan (&#3609;&#3588;&#3619;&#3626;&#3623;&#3619;&#3619;&#3588;"
+"&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:37
+msgid ""
+"Nakhon Si Thammarat (&#3609;&#3588;&#3619;&#3624;&#3619;&#3637;&#3608;&#3619;"
+"&#3619;&#3617;&#3619;&#3634;&#3594;)"
+msgstr ""
+
+#: includes/states/TH.php:38
+msgid "Nan (&#3609;&#3656;&#3634;&#3609;)"
+msgstr ""
+
+#: includes/states/TH.php:39
+msgid "Narathiwat (&#3609;&#3619;&#3634;&#3608;&#3636;&#3623;&#3634;&#3626;)"
+msgstr ""
+
+#: includes/states/TH.php:40
+msgid ""
+"Nong Bua Lam Phu (&#3627;&#3609;&#3629;&#3591;&#3610;&#3633;&#3623;&#3621;"
+"&#3635;&#3616;&#3641;)"
+msgstr ""
+
+#: includes/states/TH.php:41
+msgid "Nong Khai (&#3627;&#3609;&#3629;&#3591;&#3588;&#3634;&#3618;)"
+msgstr ""
+
+#: includes/states/TH.php:42
+msgid "Nonthaburi (&#3609;&#3609;&#3607;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:43
+msgid "Pathum Thani (&#3611;&#3607;&#3640;&#3617;&#3608;&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:44
+msgid "Pattani (&#3611;&#3633;&#3605;&#3605;&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:45
+msgid "Phang Nga (&#3614;&#3633;&#3591;&#3591;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:46
+msgid "Phatthalung (&#3614;&#3633;&#3607;&#3621;&#3640;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:47
+msgid "Phayao (&#3614;&#3632;&#3648;&#3618;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:48
+msgid ""
+"Phetchabun (&#3648;&#3614;&#3594;&#3619;&#3610;&#3641;&#3619;&#3603;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:49
+msgid "Phetchaburi (&#3648;&#3614;&#3594;&#3619;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:50
+msgid "Phichit (&#3614;&#3636;&#3592;&#3636;&#3605;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:51
+msgid "Phitsanulok (&#3614;&#3636;&#3625;&#3603;&#3640;&#3650;&#3621;&#3585;)"
+msgstr ""
+
+#: includes/states/TH.php:52
+msgid "Phrae (&#3649;&#3614;&#3619;&#3656;)"
+msgstr ""
+
+#: includes/states/TH.php:53
+msgid "Phuket (&#3616;&#3641;&#3648;&#3585;&#3655;&#3605;)"
+msgstr ""
+
+#: includes/states/TH.php:54
+msgid ""
+"Prachin Buri (&#3611;&#3619;&#3634;&#3592;&#3637;&#3609;&#3610;&#3640;&#3619;"
+"&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:55
+msgid ""
+"Prachuap Khiri Khan (&#3611;&#3619;&#3632;&#3592;&#3623;&#3610;&#3588;&#3637;"
+"&#3619;&#3637;&#3586;&#3633;&#3609;&#3608;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:56
+msgid "Ranong (&#3619;&#3632;&#3609;&#3629;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:57
+msgid "Ratchaburi (&#3619;&#3634;&#3594;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:58
+msgid "Rayong (&#3619;&#3632;&#3618;&#3629;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:59
+msgid "Roi Et (&#3619;&#3657;&#3629;&#3618;&#3648;&#3629;&#3655;&#3604;)"
+msgstr ""
+
+#: includes/states/TH.php:60
+msgid "Sa Kaeo (&#3626;&#3619;&#3632;&#3649;&#3585;&#3657;&#3623;)"
+msgstr ""
+
+#: includes/states/TH.php:61
+msgid "Sakon Nakhon (&#3626;&#3585;&#3621;&#3609;&#3588;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:62
+msgid ""
+"Samut Prakan (&#3626;&#3617;&#3640;&#3607;&#3619;&#3611;&#3619;&#3634;&#3585;"
+"&#3634;&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:63
+msgid ""
+"Samut Sakhon (&#3626;&#3617;&#3640;&#3607;&#3619;&#3626;&#3634;&#3588;"
+"&#3619;)"
+msgstr ""
+
+#: includes/states/TH.php:64
+msgid ""
+"Samut Songkhram (&#3626;&#3617;&#3640;&#3607;&#3619;&#3626;&#3591;&#3588;"
+"&#3619;&#3634;&#3617;)"
+msgstr ""
+
+#: includes/states/TH.php:65
+msgid "Saraburi (&#3626;&#3619;&#3632;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:66
+msgid "Satun (&#3626;&#3605;&#3641;&#3621;)"
+msgstr ""
+
+#: includes/states/TH.php:67
+msgid ""
+"Sing Buri (&#3626;&#3636;&#3591;&#3627;&#3660;&#3610;&#3640;&#3619;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:68
+msgid "Sisaket (&#3624;&#3619;&#3637;&#3626;&#3632;&#3648;&#3585;&#3625;)"
+msgstr ""
+
+#: includes/states/TH.php:69
+msgid "Songkhla (&#3626;&#3591;&#3586;&#3621;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:70
+msgid "Sukhothai (&#3626;&#3640;&#3650;&#3586;&#3607;&#3633;&#3618;)"
+msgstr ""
+
+#: includes/states/TH.php:71
+msgid ""
+"Suphan Buri (&#3626;&#3640;&#3614;&#3619;&#3619;&#3603;&#3610;&#3640;&#3619;"
+"&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:72
+msgid ""
+"Surat Thani (&#3626;&#3640;&#3619;&#3634;&#3625;&#3598;&#3619;&#3660;&#3608;"
+"&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:73
+msgid "Surin (&#3626;&#3640;&#3619;&#3636;&#3609;&#3607;&#3619;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:74
+msgid "Tak (&#3605;&#3634;&#3585;)"
+msgstr ""
+
+#: includes/states/TH.php:75
+msgid "Trang (&#3605;&#3619;&#3633;&#3591;)"
+msgstr ""
+
+#: includes/states/TH.php:76
+msgid "Trat (&#3605;&#3619;&#3634;&#3604;)"
+msgstr ""
+
+#: includes/states/TH.php:77
+msgid ""
+"Ubon Ratchathani (&#3629;&#3640;&#3610;&#3621;&#3619;&#3634;&#3594;&#3608;"
+"&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:78
+msgid "Udon Thani (&#3629;&#3640;&#3604;&#3619;&#3608;&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:79
+msgid ""
+"Uthai Thani (&#3629;&#3640;&#3607;&#3633;&#3618;&#3608;&#3634;&#3609;&#3637;)"
+msgstr ""
+
+#: includes/states/TH.php:80
+msgid ""
+"Uttaradit (&#3629;&#3640;&#3605;&#3619;&#3604;&#3636;&#3605;&#3606;&#3660;)"
+msgstr ""
+
+#: includes/states/TH.php:81
+msgid "Yala (&#3618;&#3632;&#3621;&#3634;)"
+msgstr ""
+
+#: includes/states/TH.php:82
+msgid "Yasothon (&#3618;&#3650;&#3626;&#3608;&#3619;)"
+msgstr ""
+
+#: includes/states/US.php:6
+msgid "Alabama"
+msgstr ""
+
+#: includes/states/US.php:7
+msgid "Alaska"
+msgstr ""
+
+#: includes/states/US.php:8
+msgid "Arizona"
+msgstr ""
+
+#: includes/states/US.php:9
+msgid "Arkansas"
+msgstr ""
+
+#: includes/states/US.php:10
+msgid "California"
+msgstr ""
+
+#: includes/states/US.php:11
+msgid "Colorado"
+msgstr ""
+
+#: includes/states/US.php:12
+msgid "Connecticut"
+msgstr ""
+
+#: includes/states/US.php:13
+msgid "Delaware"
+msgstr ""
+
+#: includes/states/US.php:14
+msgid "District Of Columbia"
+msgstr ""
+
+#: includes/states/US.php:15
+msgid "Florida"
+msgstr ""
+
+#: includes/states/US.php:17
+msgid "Hawaii"
+msgstr ""
+
+#: includes/states/US.php:18
+msgid "Idaho"
+msgstr ""
+
+#: includes/states/US.php:19
+msgid "Illinois"
+msgstr ""
+
+#: includes/states/US.php:20
+msgid "Indiana"
+msgstr ""
+
+#: includes/states/US.php:21
+msgid "Iowa"
+msgstr ""
+
+#: includes/states/US.php:22
+msgid "Kansas"
+msgstr ""
+
+#: includes/states/US.php:23
+msgid "Kentucky"
+msgstr ""
+
+#: includes/states/US.php:24
+msgid "Louisiana"
+msgstr ""
+
+#: includes/states/US.php:25
+msgid "Maine"
+msgstr ""
+
+#: includes/states/US.php:26
+msgid "Maryland"
+msgstr ""
+
+#: includes/states/US.php:27
+msgid "Massachusetts"
+msgstr ""
+
+#: includes/states/US.php:28
+msgid "Michigan"
+msgstr ""
+
+#: includes/states/US.php:29
+msgid "Minnesota"
+msgstr ""
+
+#: includes/states/US.php:30
+msgid "Mississippi"
+msgstr ""
+
+#: includes/states/US.php:31
+msgid "Missouri"
+msgstr ""
+
+#: includes/states/US.php:32
+msgid "Montana"
+msgstr ""
+
+#: includes/states/US.php:33
+msgid "Nebraska"
+msgstr ""
+
+#: includes/states/US.php:34
+msgid "Nevada"
+msgstr ""
+
+#: includes/states/US.php:35
+msgid "New Hampshire"
+msgstr ""
+
+#: includes/states/US.php:36
+msgid "New Jersey"
+msgstr ""
+
+#: includes/states/US.php:37
+msgid "New Mexico"
+msgstr ""
+
+#: includes/states/US.php:38
+msgid "New York"
+msgstr ""
+
+#: includes/states/US.php:39
+msgid "North Carolina"
+msgstr ""
+
+#: includes/states/US.php:40
+msgid "North Dakota"
+msgstr ""
+
+#: includes/states/US.php:41
+msgid "Ohio"
+msgstr ""
+
+#: includes/states/US.php:42
+msgid "Oklahoma"
+msgstr ""
+
+#: includes/states/US.php:43
+msgid "Oregon"
+msgstr ""
+
+#: includes/states/US.php:44
+msgid "Pennsylvania"
+msgstr ""
+
+#: includes/states/US.php:45
+msgid "Rhode Island"
+msgstr ""
+
+#: includes/states/US.php:46
+msgid "South Carolina"
+msgstr ""
+
+#: includes/states/US.php:47
+msgid "South Dakota"
+msgstr ""
+
+#: includes/states/US.php:48
+msgid "Tennessee"
+msgstr ""
+
+#: includes/states/US.php:49
+msgid "Texas"
+msgstr ""
+
+#: includes/states/US.php:50
+msgid "Utah"
+msgstr ""
+
+#: includes/states/US.php:51
+msgid "Vermont"
+msgstr ""
+
+#: includes/states/US.php:52
+msgid "Virginia"
+msgstr ""
+
+#: includes/states/US.php:53
+msgid "Washington"
+msgstr ""
+
+#: includes/states/US.php:54
+msgid "West Virginia"
+msgstr ""
+
+#: includes/states/US.php:55
+msgid "Wisconsin"
+msgstr ""
+
+#: includes/states/US.php:56
+msgid "Wyoming"
+msgstr ""
+
+#: includes/states/US.php:57
+msgid "Armed Forces (AA)"
+msgstr ""
+
+#: includes/states/US.php:58
+msgid "Armed Forces (AE)"
+msgstr ""
+
+#: includes/states/US.php:59
+msgid "Armed Forces (AP)"
+msgstr ""
+
+#: includes/states/US.php:60
+msgid "American Samoa"
+msgstr ""
+
+#: includes/states/US.php:61
+msgid "Guam"
+msgstr ""
+
+#: includes/states/US.php:62
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: includes/states/US.php:63
+msgid "Puerto Rico"
+msgstr ""
+
+#: includes/states/US.php:64
+msgid "US Minor Outlying Islands"
+msgstr ""
+
+#: includes/states/US.php:65
+msgid "US Virgin Islands"
+msgstr ""
+
+#: includes/states/ZA.php:6
+msgid "Eastern Cape"
+msgstr ""
+
+#: includes/states/ZA.php:7
+msgid "Free State"
+msgstr ""
+
+#: includes/states/ZA.php:8
+msgid "Gauteng"
+msgstr ""
+
+#: includes/states/ZA.php:9
+msgid "KwaZulu-Natal"
+msgstr ""
+
+#: includes/states/ZA.php:10
+msgid "Limpopo"
+msgstr ""
+
+#: includes/states/ZA.php:11
+msgid "Mpumalanga"
+msgstr ""
+
+#: includes/states/ZA.php:12
+msgid "Northern Cape"
+msgstr ""
+
+#: includes/states/ZA.php:13
+msgid "North West"
+msgstr ""
+
+#: includes/states/ZA.php:14
+msgid "Western Cape"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:65
+msgid "Cost"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:85
+msgid "Event Dates"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:90
+msgid "Starts"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:92
+msgid "Ends"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:96
+msgid "Add To"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:123
+#: templates/ignitewoo-event-details-template.php:130
+msgid "at"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:144
+msgid "Add to Google Calendar"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:144
+msgid "gCal"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:159
+msgid "Add to Your Calendar"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:159
+msgid "iCal"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:498
+msgid "Sessions"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:509
+msgid "Speakers"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:526
+msgid "Session Organizers"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:569
+msgid "Session Sponsors"
+msgstr ""
+
+#: templates/ignitewoo-event-details-template.php:614
+msgid "Session Speakers"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Event Calendar & Ticketing"
+msgstr ""
+
+#. #-#-#-#-#  plugin.pot (Event Calendar & Ticketing 2.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  plugin.pot (Event Calendar & Ticketing 2.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://ignitewoo.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Full featured super-powered event calendar and ticketing management system."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "IgniteWoo.com"
+msgstr ""

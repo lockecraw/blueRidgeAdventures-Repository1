@@ -1,0 +1,377 @@
+/*   
+Theme Name: Blue Ridge Adventures
+Description: A custom theme for Blue Ridge Adventures</a>.
+Author: Locke Crawford
+Author URI: locke@lokkdesign.com
+Version: 1.0
+
+*/
+
+@import url('reset.css');
+@import url('typography.css');
+@import url('grid.css');
+@import url('forms.css');
+
+/* header */
+.header {
+        padding: 0px 0px 50px 10px;
+}
+
+#header-wrap {
+	border-bottom: 1px solid #cccccc;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+
+#header-wrap h1 {
+        width: 400px;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+}
+#header-wrap .description {
+        clear: both;
+}
+#search-bar {
+        width: 400px;
+        float: right;
+}
+
+#logo {
+	float: left;
+	margin: 0 20px 20px 0;
+	
+}
+
+/* links */
+a:link, a:visited {
+	color: #00529b;
+	text-decoration: none;
+	}
+	
+a:hover {
+	text-decoration: none;
+	color: #008061;
+	}
+/* navigation */
+#nav-bar {
+        border-bottom: solid 1px #ccc;
+	width: 960px;
+	height: 26px;
+	margin: 20px 0px 50px 0px;
+	padding: 0px 0px 10px 0px;
+	}
+	
+#navbar-left {
+	width: 850px;
+	height: 26px;
+	float: left;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	}
+	
+#navbar-right {
+	width: 30px;
+	height: 26px;
+	float: right;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
+	text-align: right;
+	}
+	
+#navbar-right a img {
+	border: none;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	}
+
+#nav {
+	float: left;
+	width: 727px;
+	display: block;
+	margin: 0px;
+	padding: 20px 0 0 0;
+	list-style: none;
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+	
+#nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	}
+
+#nav a {
+	display: block;
+        font-weight: bold;
+        margin: 0px 20px 0px 0px;
+	padding: 0px 10px 5px 10px;
+	}
+	
+#nav a:hover {
+	display: block;
+        margin: 0px 20px 0px 0px;
+	padding: 0px 10px 5px 10px;
+	}
+
+#nav li {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	}
+#nav li li {
+	display: none;
+	}
+/* header */
+#footer {
+        margin: 30px 0px 30px 0px;
+        padding: 30px 0px 30px 0px;
+        border-top: solid 1px #ccc;
+}
+/* Misc */
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+/* post */
+.meta {
+}
+/* COmments */
+#comments {
+        margin:20px 0px 10px 0px;
+        padding:20px 0px 10px 0px;
+        border-top: solid 1px #ccc;
+}
+#postcomment {
+        margin:20px 0px 10px 0px;
+        padding:20px 0px 10px 0px;
+        border-top: solid 1px #ccc;
+}
+/* featured section */
+#featured-sticker {
+        width: 100px;
+        padding: 5px;
+        margin-left: 800px;
+        background-color: #f00;
+        color: white;
+        text-align: center;
+        position: absolute;
+        float: right;
+}
+#featured-post {
+        background-color: #f3f3f3;
+        padding:20px;
+        margin: 0px 0px 45px 0px;
+        border-top: solid 3px #ccc;
+        border-bottom: solid 1px #ccc;
+}
+
+#post-entries {
+        padding: 0px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
+       
+}
+
+
+/* Woocommerce Overrides  ----------------------------  */
+
+ul.products li.first {
+	clear: none!important;
+}
+
+ul.products li.product {
+	background: #EEEEEE;
+	float: left!important;
+	margin: 0 6px 20px 0!important;
+	padding: 0 0 5px 0!important;
+	position: relative!important;
+	width: 200px!important;
+	margin-left: 0!important;
+	list-style: none;
+	height: 300px!important;
+}
+
+ul.products li.product .registrationAlert {
+	border-top: 1px solid #008061;
+	border-bottom: 2px solid #008061;
+	font-size: 10px;
+	line-height: 15px;
+	padding: 5px 0px;
+	color: #FFFFFF;
+	background: #00529b;
+	width: 200px;
+	height: 15px;
+	top: 178px;
+	position: absolute;
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.registrationAlertSingleProduct {
+	border-top: 1px solid #008061;
+	border-bottom: 2px solid #008061;
+	font-size: 17px;
+	line-height: 17px;
+	padding: 5px 0px;
+	color: #FFFFFF;
+	background: #00529b;
+	width: 300px;
+	height: 17px;
+	top: 305px;
+	position: absolute;
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.related {
+	clear: both;
+}
+
+h1.product_title {
+	margin-bottom: 15px;
+}
+
+.leftRegistrationBlock .price {
+	position: absolute;
+	top: 335px;
+}
+
+ul.products li.product h3 {
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+	font-size: 13px!important;
+	padding: 5px 5px 5px 5px!important;
+	color: #000000!important
+}
+
+ul.products li.product .price {
+	padding: 0px 5px!important;
+	font-weight: bold!important;
+	font-size: 15px!important;
+}
+
+.upsells h1, .related h1 {
+	margin-bottom: 10px;
+}
+
+table.variations td.label {
+	font-size: 18px;
+	text-transform: uppercase;
+	line-height: 1;
+	margin-bottom: .5em;
+	padding: 0px;
+	color: #777777;
+}
+.event-addon {
+	display: block;
+	margin: 5px 0 20px 0px;
+	color: #666666; 
+}
+
+.event-addon h3 {
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin: 0px;
+	color: #777777;
+}
+
+.event-addon p {
+	margin: 0px;
+}
+
+button.single_add_to_cart_button {
+	background-color: #00529b;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+}
+
+button.single_add_to_cart_button {
+	background-color: #00529b;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: "Arial Black",Impact,sans-serif;
+	text-transform: uppercase;
+}
+
+.price {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: "Arial Black",Impact,sans-serif;
+	color: #85ad74;
+}
+.from {
+	font-size: 10px;
+	color: #000000;
+}
+
+ins {
+	text-decoration: none!important;
+}
+
+a.sponsorLogo img {
+	display: inline-table;
+	vertical-align: middle;
+	padding: 9px;
+}
+
+.leftRegistrationBlock {
+	float: left;
+	padding: 0 20px 0 0;
+	width: 300px;
+	position: relative;
+	height: 375px;
+	margin-bottom: 10px;
+}
+
+.registrationHeader {
+	clear: both;
+	margin-top: 10px;
+	padding: 20px 0 0 0;
+	border-top: 1px solid #cccccc;
+}
+
+.shortDescription {
+	overflow: hidden;
+}

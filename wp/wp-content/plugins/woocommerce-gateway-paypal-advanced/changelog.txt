@@ -1,0 +1,62 @@
+*** Paypal Advanced Changelog *
+2014.01.25 - version 1.7.8
+* Fixed state error
+
+2014.01.18 - version 1.7.7
+* Field length error
+* Shipping Address issue (for countries, state is not mandatory)
+
+2013.11.12 - version 1.7.6
+ * Canada support added
+
+2013.11.10 - version 1.7.5
+ * Silent POST Implemented
+
+2013.09.16 - version 1.7.4
+ * Updated API call
+
+2013.07.23 - version 1.7.3
+ * Tweaked request
+
+2013.07.12 - version 1.7.2
+ * Modified the description of the layout field in admin panel
+ * Fixed the password special characters issue
+
+2013.06.18 - version 1.7.1
+ * Changes made to the labels according to the PayPal Terminology
+
+2013.05.14 - version 1.7
+ * SSL issue and a minor bug fixed
+
+2013.05.01 - version 1.6
+ * Handled some of configurations through code itself to reduce configuration issues
+ * Invoice Prefix introduced
+ * Handled Errors & Cancellation transaction in efficient manner
+ * Collecting more debug information in the logs
+ * Introduced some more configuration options like border,button,text color selection
+
+2013.01.24 - version 1.5
+ * Compatible to Woocommerce 2.0
+
+2013.01.19 - version 1.4
+ * Fixed Error in settings page with Enable/Disable
+
+2012.12.21 - version 1.3
+ * Fixed small bugs
+ * Added more debug information (incase of error)
+
+2012.12.05 - version 1.2.1
+ * Updater
+
+2012.10.27 - version 1.2
+ * Fixed all the major and minor bugs
+
+2012.10.08 - version 1.1
+ * check Out Page issue fixed
+ * To double check the transaction approval, included inquiry transaction
+ * Included shipping information when order discount or prices include tax
+ * Display error information instead of PayPal handling it
+ * Updated languages file accordingly
+
+2012.09.06 - version 1.0
+ * First Release
